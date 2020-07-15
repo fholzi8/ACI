@@ -8,7 +8,9 @@ Also, you must have already installed the <a href="https://developer.cisco.com/m
   
 The following diagram depicts the design of the IPN connectivity showing only the relevant devices for IPN, all other spine and all leaf switches are not shown for brevity.
 
-<a href="https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png"></a>
+<a href="https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png">
+ <img class="aligncenter size-full wp-image-362" src="https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png" alt="" width="1477" height="617" srcset="https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png 1477w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png 300w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png 768w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/ACI_MPOD-IPN.png 1024w" sizes="(max-width: 1477px) 100vw, 1477px" />
+</a>
 
 In this deployment, POD-1 and POD-2 happen to be in geographically diverse data centers where the four inter-connecting WAN links are 10Gbps Ethernet each although the POD’s could be in different campus locations or on different floors in a data center.
 IPN L2
