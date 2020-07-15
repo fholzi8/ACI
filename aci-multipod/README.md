@@ -467,7 +467,7 @@ The following configuration is stripped to the essentials for IPN, it shows IPN-
 
 	hostname IPN-POD1-01
 	
- 	feature ospf
+	feature ospf
 	feature pim
 	feature dhcp
 	feature lldp
