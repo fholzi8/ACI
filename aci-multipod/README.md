@@ -93,4 +93,16 @@ Cisco ACI requires\recommends (works best with) bi-dir multicast as we have many
 What is important to note is that bi-dir has no native solution for redundancy. To implement redundancy we create use the concept of Redundant Phantom Rendezvous Points, we use the single IP address for the RP configuration on each of the IPN devices as shown above. This configuration is discussed later in this post.
 Cisco ACI uses a multicast address per bridge domain to encapsulate BUM traffic to be sent to other TEPs (Leaf Switches) across the fabric. This concept is extended over the IPN for multi pod deployments. If we take a look at an example bridge domain on the APIC which is active in both pods, we see on the “Advanced/Troubleshooting” tab that we have a system assigned multicast address of 225.0.13.224/32 which is unique to this bridge domain.
 
+<a href="https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png">
+ <img class="aligncenter size-full wp-image-362" src="https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png" alt="" width="1477" height="617" srcset="https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png 1477w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png 300w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png 768w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/bridge-domain-mcast-addr.png 1024w" sizes="(max-width: 1477px) 100vw, 1477px" />
+</a>
 
+If we want to quickly get a list of all the bridge domains and the assigned multicast addresses, from the APIC CLI use the following command:
+
+	moquery -c fvBD | grep 'name\|bcastP'
+
+The spine switches do not support PIM, they use IGMP joins to the connected L3 IPN devices as a host or L2 switch would. This is important to note as you need to be sure your IPN design does not have IPN devices forwarding PIM joins to the RP through the spine switches. As the spine switches do not run PIM they will drop the PIM requests and break multicast. An example of this design issue is where redundant IPN devices are used in both PODs and the local IPN devices connected to the spine switches do not have a PIM enabled path between them locally or towards the RP. It is possible to fix this with OSPF costs but you would have hair-pinning of PIM joins and multicast data over your WAN – not very efficient ! The following diagram explains the issue.
+
+<a href="https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png">
+ <img class="aligncenter size-full wp-image-362" src="https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png" alt="" width="1477" height="617" srcset="https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png 1477w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png 300w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png 768w, https://github.com/fholzi8/ACI/blob/master/aci-multipod/IPN-DESIGN-ISSUE.png 1024w" sizes="(max-width: 1477px) 100vw, 1477px" />
+</a>
