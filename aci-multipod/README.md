@@ -1,4 +1,4 @@
-# aci-multipod
+# ACI-MultiPod
 <P>
 There are four files here in two logical groups.   The two text files are the running configs of my IPN Nexus 9200 series standlone switches.  Use these as example to build up your own IPN devices.  Key areas to look at are setting up PIM, DHCP-Relay, MTU of 9150, and OSPF.
 
