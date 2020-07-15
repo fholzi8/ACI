@@ -1,0 +1,3 @@
+Routed L3 Network:
+
+Layer 3 networks that are outside the 'fabric' by configuring the Tenant applications. Following example shows the details of routed L3 network.

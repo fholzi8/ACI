@@ -1,0 +1,3 @@
+OSPF Interface Profile:
+
+The OSPF interface profile, which enables OSPF on the interface. Optionally, the OSPF interface profile can have a relation to an OSPF interface policy for more granular control over interface proprieties. Following example shows the details of OSPF interface profile.

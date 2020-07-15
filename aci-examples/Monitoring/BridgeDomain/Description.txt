@@ -1,0 +1,3 @@
+Bridge Domain:
+
+A bridge domain represents a L2 forwarding construct within the fabric. Following example shows the details of Bridge domain.

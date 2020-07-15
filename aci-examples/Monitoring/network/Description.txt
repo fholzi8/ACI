@@ -1,0 +1,3 @@
+Network:
+
+A network is a layer 3 context (a VRF) that provides IP address space isolation for tenants. Following example shows the details of network.

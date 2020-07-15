@@ -1,0 +1,3 @@
+Physical Domain Panel:
+
+The physical domain profile stores the physical resources (ports and port-channels) and encap resources (VLAN/VXLAN) that should be used for endpoint groups associated with this domain.  Following example shows the details of physical domain.

@@ -1,0 +1,3 @@
+Node Profile:
+
+The logical profile, which defines a common configuration that can be applied to one or more leaf nodes. Following example shows the details of node profiles.
