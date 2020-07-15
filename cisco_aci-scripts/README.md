@@ -1,4 +1,4 @@
-cisco_aci-scripts
+cisco_aci-scripts. (deprecated)
 =========
 Requirements: 
     Python 2.7+ - 2.7.9 recomended due to security changes
