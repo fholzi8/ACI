@@ -1,0 +1,9 @@
+name,description,tags,mon_policy,ctrl_mgmt_policy,security_domain
+TEN_INET,International Resources,,,,
+TEN_COUNTRY,Country Resources,,,,
+TEN_NONSTANDARD,Non-Standard Resources,,,,
+TEN_NONSTANDARD_CLIENTS,,,,,
+TEN_PROJECT,Project Resources,,,,
+TEN_ADMINISTRATION,Administration Resources,,,,
+TEN_SHARED_SERVICES,Shared Services Tenant,,,,
+TEN_STANDARD_CLIENTS,,,,,

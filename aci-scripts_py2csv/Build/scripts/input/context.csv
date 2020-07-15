@@ -1,0 +1,5 @@
+name,tenant,description,policy_enforcement,bgp_timers,ospf_timers,ep_retention,monitoring_policy,dns_label,route_tag_policy,Comment
+VRF_POD2_DEFAULT,TEN_ADMINISTRATION,Site2,unenforced,default,default,default,default,default,default,
+VRF_POD1_DEFAULT,TEN_ADMINISTRATION,Site1,unenforced,default,default,default,default,default,default,
+VRF_POD1_DEFAULT,TEN_COUNTRY,Site1,unenforced,default,default,default,default,default,default,
+VRF_POD2_DEFAULT,TEN_COUNTRY,Site2,unenforced,default,default,default,default,default,default,

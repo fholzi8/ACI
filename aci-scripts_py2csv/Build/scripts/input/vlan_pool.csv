@@ -1,0 +1,19 @@
+name,alloc_mode,start_vlan,stop_vlan,comment
+VLANP_MPOD,static,4.0,4.0,multipod
+VLANP_POD1_STATIC,static,100.0,599.0,original/new
+VLANP_POD2_STATIC,static,600.0,799.0,original
+VLANP_POD2_STATIC,static,100.0,599.0,new
+VLANP_POD3_STATIC,static,800.0,1099.0,original
+VLANP_POD3_STATIC,static,100.0,599.0,new
+VLANP_POD5_STATIC,static,1100.0,1249.0,original
+VLANP_POD5_STATIC,static,100.0,599.0,new
+VLANP_POD4_STATIC,static,1250.0,1399.0,original
+VLANP_POD4_STATIC,static,100.0,599.0,new
+VLANP_POD1_VMM,dynamic,1400.0,2399.0,
+VLANP_POD2_VMM,dynamic,2400.0,2699.0,
+VLANP_MAN_VMM,dynamic,2700.0,3099.0,
+VLANP_POD5_VMM,dynamic,3100.0,3399.0,
+VLANP_POD4_VMM,dynamic,3400.0,3599.0,
+VLANP_L4_L7,dynamic,3600.0,3799.0,
+VLANP_L3OUT,static,3800.0,3900.0,3901+ for infra use inb
+VLANP_INB,static,3966.0,3966.0,Inband Management

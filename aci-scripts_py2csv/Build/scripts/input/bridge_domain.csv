@@ -1,0 +1,99 @@
+tenant,context,name,description,bd_type,bd_gateway_ip,l3_out,subnet_type,l2_unknown_unicast,l3_unknown_multicast,multi_dest_flood,arp_flood,unicast_routing,igmp_snoop,monitoring_policy
+TEN_ADMINISTRATION,VRF_POD1_DEFAULT,BD_POD1_VLAN225, srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN600,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN601,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN602,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN603,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN604,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN605,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN606,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN607,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN608,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN609,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN610,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN611,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN612,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN613,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN614,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN615,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN616,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN617,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN618,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN619,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN620,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN621,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN622,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN623,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN624,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN625,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN626,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN627,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN628,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN629,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN630,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN631,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN632,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN633,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN634,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN635,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN636,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN637,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN638,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN639,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN640,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN641,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN642,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN643,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN644,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN645,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN646,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN647,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN648,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN649,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN650,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN651,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN652,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN653,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN654,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN657,srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD2_DEFAULT,BD_POD2_VLAN659,Tsrv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD3_DEFAULT,BD_POD3_VLAN800, srv_description,L2,,,,flood,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD3_DEFAULT,BD_POD3_VLAN801, srv_description,L2,,,,flood,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD3_VRF_D,BD_POD3_VLAN804, srv_description,L3,1.1.235.188/27,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD3_VRF_E,BD_POD3_VLAN802, srv_description,L3,1.1.253.60/27,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD3_VRF_E,BD_POD3_VLAN803, srv_description,L3,1.1.254.124/27,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD3_VRF_D,BD_POD3_VLAN805, srv_description,L3,1.1.249.60/27,,,proxy,flood,bd-flood,no,yes,default,defau
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN100, srv_description,L3,1.2.4.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN101, srv_description,L3,1.2.4.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN102, srv_description,L3,1.2.4.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN103, srv_description,L3,1.2.4.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN104, srv_description,L3,1.2.5.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN105, srv_description,L3,1.2.5.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN106, srv_description,L3,1.2.5.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN107, srv_description,L3,1.2.5.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN108, srv_description,L3,1.2.6.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN109, srv_description,L3,1.2.6.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN110, srv_description,L3,1.2.6.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN111, srv_description,L3,1.2.6.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN112, srv_description,L3,1.2.7.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN113, srv_description,L3,1.2.7.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN114, srv_description,L3,1.2.7.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN115, srv_description,L3,1.2.7.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN116, srv_description,L3,1.2.8.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN117, srv_description,L3,1.2.8.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN118, srv_description,L3,1.2.8.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN119, srv_description,L3,1.2.8.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN120, srv_description,L3,1.2.9.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN121, srv_description,L3,1.2.9.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN122, srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN123, srv_description,L3,1.2.9.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN124, srv_description,L3,10.116.230.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN125, srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN126, srv_description,L3,10.116.230.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN127, srv_description,L3,10.116.230.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN128, srv_description,L2,,,,flood,flood,bd-flood,yes,no,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN129, srv_description,L3,10.116.231.124/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN130, srv_description,L3,10.116.231.188/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN131, srv_description,L3,10.116.231.252/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN132, srv_description,L3,10.116.232.60/26,,,proxy,flood,bd-flood,no,yes,default,default
+TEN_INET,VRF_POD1_VRF_A,BD_POD1_VLAN133, srv_description,L3,10.116.232.124/26,,,proxy,flood,bd-flood,no,yes,default,default
