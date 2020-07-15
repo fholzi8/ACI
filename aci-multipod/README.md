@@ -108,4 +108,481 @@ The spine switches do not support PIM, they use IGMP joins to the connected L3 I
 </a>
 
 The preceding design shows the problem in that there are no links and/or local PIM enabled paths between the local IPN devices. This causes multicast to break. When POD-1 S102 sends an IGMP Join to IPN-POD1-02, IPN-POD1-02 converts this to a PIM Join and sends to its configured RP (IPN-POD1-01). IPN-POD1-02 looks in its route table and finds the best way is via POD-1 S101 spine switch, it sends the PIM join towards the S101 switch. When the S101 switch receives this PIM Join it drops it because the spine switches only run IGMP not PIM. (All OSPF interface costs are default, IPN WAN are 10G, IPN-SPINE are 40G links)
-The IPN-POD1-02 device is not informed of the PIM drop by the spine switch and therefore installs multicast routes in the mroute table to send and receive multicast packets for the (*,G) over the link to S101. No multicast traffic will be received over the S101->IPN-POD1-02 link as the IGMP join on the IPN device is from spine S102. This could be solved by changing OSPF costs but the same issue would occur during certain failure scenarios or traffic would hairpin through POD-2.Examples of ARPs from Host-A for Host-B, the multicast encapsulated ARP would get as far as S101 (S102>>IPN-POD1-02>>S102) and be dropped by S102. For ARPs from Host-B for Host-A, the multicast encapsulated ARP would be sent from POD-2 from S104>>IPN-POD2-01>>IPN-POD1-01[RP] which is correct, but there are no PIM joins on this path from POD-1 as they were dropped at S101.
+
+The IPN-POD1-02 device is not informed of the PIM drop by the spine switch and therefore installs multicast routes in the mroute table to send and receive multicast packets for the (*,G) over the link to S101. No multicast traffic will be received over the S101->IPN-POD1-02 link as the IGMP join on the IPN device is from spine S102. This could be solved by changing OSPF costs but the same issue would occur during certain failure scenarios or traffic would hairpin through POD-2.
+
+Examples of ARPs from Host-A for Host-B, the multicast encapsulated ARP would get as far as S101 (S102>>IPN-POD1-02>>S102) and be dropped by S102. For ARPs from Host-B for Host-A, the multicast encapsulated ARP would be sent from POD-2 from S104>>IPN-POD2-01>>IPN-POD1-01[RP] which is correct, but there are no PIM joins on this path from POD-1 as they were dropped at S101.
+
+<h4>Validation</h4>
+
+We should have the APIC configured with multipod and a L3Out which enables the spine interfaces configured to actively sending IGMP joins for bridge domain multicast addresses. So to validate the operation lets check to see we have the expected IGMP Joins from the spine switches to the directly connected IXN devices. We will look for a particular join on 225.0.13.224 as we saw in the APIC bridge domain (shown previously) advanced section of the GUI. The ACI fabric will only send one join in each POD for each multicast address so look on all directly connected IXN devices to spines.
+
+Cisco CCO document states the selection of the spine node and link to send the IGMP as:
+“For each Bridge Domain, one spine node is elected as the authoritative device to perform both functions described above (the IS-IS control plane between the spines is used to perform this election). the elected spine will select a specific physical link connecting to the IPN devices to be used to send out the IGMP join (hence to receive multicast traffic originated by a remote leaf) and for forwarding multicast traffic originated inside the local Pod.”
+
+Looking at the output from the POD-1 & POD-2 spine devices on vlan-4 which is the vlan used by multi-pod on the fabric.
+
+	• In POD-1 we find the IGMP Join from S102 to IPN-POD1-02 device
+	• In POD-2 we find the IGMP Join from S104 to IPN-POD2-01 device
+
+Spine switches S101 & S102 are in POD-1 and S103 & S104 are in POD-2 as shown in the first diagram in this post. We can validate the device the join is sent to by looking at the outbound interface and checking against the diagram and/or as shown in the next section where we will be looking at the IPN devices IGMP Joins received.
+
+<h4>Spine Switch IGMP Join</h4>
+
+	S101# show ip igmp gipo joins
+	GIPo list as read from IGMP-IF group-linked list
+	------------------------------------------------
+	GIPo Addr         Source Addr       Join/Leave  Interface           Iod       Enable/Disable
+	225.0.59.64       0.0.0.0           Join        Eth1/36.42          76        Enabled
+	225.0.238.32      0.0.0.0           Join        Eth1/36.42          76        Enabled
+	239.255.255.240   0.0.0.0           Join        Eth1/36.42          76        Enabled
+	 
+	S102# show ip igmp gipo joins
+	GIPo list as read from IGMP-IF group-linked list
+	------------------------------------------------
+	GIPo Addr         Source Addr       Join/Leave  Interface           Iod       Enable/Disable
+	225.0.0.0         0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.0.87.176      0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.0.156.48      0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.0.174.32      0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.1.34.64       0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.1.142.160     0.0.0.0           Join        Eth1/36.43          76        Enabled
+	225.0.13.224      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.0.149.0       0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.1.60.208      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	 
+	S103# show ip igmp gipo join
+	GIPo list as read from IGMP-IF group-linked list
+	------------------------------------------------
+	GIPo Addr         Source Addr       Join/Leave  Interface           Iod       Enable/Disable
+	225.0.0.0         0.0.0.0           Join        Eth1/32.47          72        Enabled
+	225.0.59.64       0.0.0.0           Join        Eth1/32.47          72        Enabled
+	225.1.142.160     0.0.0.0           Join        Eth1/32.47          72        Enabled
+	239.255.255.240   0.0.0.0           Join        Eth1/32.47          72        Enabled
+	 
+	S104# show ip igmp gipo joins
+	GIPo list as read from IGMP-IF group-linked list
+	------------------------------------------------
+	GIPo Addr         Source Addr       Join/Leave  Interface           Iod       Enable/Disable
+	225.0.87.176      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.0.156.48      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.0.174.32      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.0.238.32      0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.1.34.64       0.0.0.0           Join        Eth1/32.32          72        Enabled
+	225.0.13.224      0.0.0.0           Join        Eth1/36.47          76        Enabled
+	225.0.149.0       0.0.0.0           Join        Eth1/36.47          76        Enabled	
+	225.1.60.208      0.0.0.0           Join        Eth1/36.47          76        Enabled
+
+Now we have confirmed there are IGMP Joins being sent towards the IPN devices from the ACI fabric spine switches, we check each directly connected IPN device for IGMP joins. The following output is from each of the directly connected IPN devices. Again we can check any bridge domain multicast address. In this case we are looking for 225.0.13.224, this should be present on one of each of the IPN devices in each connected POD. We see (as we expected) that IPN-POD1-02 has an IGMP join from the fabric spine 102 and IPN-POD2-01 has an IGMP join from fabric spine 104 in POD2. Notice we have IGMP joins across all switches and IPN connected interfaces in each POD showing some type of load sharing. We can check the source of the IGMP Join from the received interface and/or the Last Reporter in the output being the spine l3 interface address.
+
+	IPN-POD1-01# sh ip igmp groups vrf fabric-mpod
+	IGMP Connected Group Membership for VRF "fabric-mpod" - 9 total entries
+	Type: S - Static, D - Dynamic, L - Local, T - SSM Translated
+	Group Address      Type Interface           Uptime    Expires   Last Reporter
+	225.0.0.0          D    Ethernet1/5.4       1w4d      00:02:27  10.96.1.250
+	225.0.59.64        D    Ethernet1/1.4       3d05h     00:03:37  10.96.1.254
+	225.0.87.176       D    Ethernet1/5.4       1d08h     00:02:26  10.96.1.250
+	225.0.156.48       D    Ethernet1/5.4       3d00h     00:02:27  10.96.1.250
+	225.0.174.32       D    Ethernet1/5.4       1d08h     00:02:26  10.96.1.250
+	225.0.238.32       D    Ethernet1/1.4       3d05h     00:03:37  10.96.1.254
+	225.1.34.64        D    Ethernet1/5.4       3d05h     00:02:27  10.96.1.250
+	225.1.142.160      D    Ethernet1/5.4       3d05h     00:02:27  10.96.1.250
+	239.255.255.240    D    Ethernet1/1.4       1w4d      00:03:37  10.96.1.254
+	 
+	IPN-POD1-02# sh ip igmp groups vrf fabric-mpod
+	IGMP Connected Group Membership for VRF "fabric-mpod" - 3 total entries
+	Type: S - Static, D - Dynamic, L - Local, T - SSM Translated
+	Group Address      Type Interface           Uptime    Expires   Last Reporter
+	225.0.13.224       D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	225.0.149.0        D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	225.1.60.208       D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	 
+	IPN-POD2-01# sh ip igmp groups vrf fabric-mpod
+	IGMP Connected Group Membership for VRF "fabric-mpod" - 3 total entries
+	Type: S - Static, D - Dynamic, L - Local, T - SSM Translated
+	Group Address      Type Interface           Uptime    Expires   Last Reporter
+	225.0.13.224       D    Ethernet1/5.4       04:27:15  00:03:23  10.96.2.250
+	225.0.149.0        D    Ethernet1/5.4       04:27:14  00:03:23  10.96.2.250
+	225.1.60.208       D    Ethernet1/5.4       04:27:13  00:03:22  10.96.2.250
+	 
+	IPN-POD2-02# sh ip igmp gr vrf fabric-mpod
+	IGMP Connected Group Membership for VRF "fabric-mpod" - 9 total entries
+	Type: S - Static, D - Dynamic, L - Local, T - SSM Translated
+	Group Address      Type Interface           Uptime    Expires   Last Reporter
+	225.0.0.0          D    Ethernet1/1.4       04:10:29  00:04:16  10.96.2.242
+	225.0.59.64        D    Ethernet1/1.4       04:10:29  00:04:16  10.96.2.242
+	225.0.87.176       D    Ethernet1/5.4       04:10:29  00:02:49  10.96.2.246
+	225.0.156.48       D    Ethernet1/5.4       04:10:29  00:02:49  10.96.2.246
+	225.0.174.32       D    Ethernet1/5.4       04:10:29  00:02:49  10.96.2.246
+	225.0.238.32       D    Ethernet1/5.4       04:10:29  00:02:48  10.96.2.246
+	225.1.34.64        D    Ethernet1/5.4       04:10:29  00:02:49  10.96.2.246
+	225.1.142.160      D    Ethernet1/1.4       04:10:29  00:04:16  10.96.2.242
+	239.255.255.240    D    Ethernet1/1.4       04:10:29  00:04:16  10.96.2.242
+
+Now we have verified IGMP we can move on to validating PIM from the IPN devices receiving the IGMP Join. These devices will ‘convert’ the IGMP Join to a PIM Join and send to the configured RP hop by hop using the unicast routing table. Each router along the path will register the join and create a (*,G) in the multicast route table to send any multicast packet received by this router out of the interface that the PIM Join has been received providing the multicast packet was not received on that same interface. Notice that on the IXN devices that received the IGMP Join you will see that the multicast route table has an outgoing interface where the IGMP Join was received labelled with IGMP in addition to other PIM incoming and outgoing interfaces.
+
+The RP is IPN-POD1-01, the backup RP is IPN-POD1-02. Again look for the (S,G): (*, 225.0.13.224), you can use the network diagram as a reference and trace down the path to the RP and the paths back to the spines.
+Output of the multicast route table on the IPN devices.
+
+	IPN-POD1-01# sh ip mroute vrf fabric-mpod
+	IP Multicast Routing Table for VRF "fabric-mpod"
+	 
+	(*, 225.0.0.0/8), bidir, uptime: 2w0d, pim ip
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 0)
+	 
+	(*, 225.0.0.0/32), bidir, uptime: 1w4d, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.0.13.224/32), bidir, uptime: 3d00h, pim ip
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:06:39, pim
+	    Ethernet1/35/1, uptime: 04:24:49, pim
+	 
+	(*, 225.0.59.64/32), bidir, uptime: 3d05h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/1.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.0.87.176/32), bidir, uptime: 3d05h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.0.149.0/32), bidir, uptime: 3d05h, pim ip
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:06:39, pim
+	    Ethernet1/35/1, uptime: 04:24:49, pim
+	 
+	(*, 225.0.156.48/32), bidir, uptime: 3d00h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.0.174.32/32), bidir, uptime: 3d01h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.0.238.32/32), bidir, uptime: 3d05h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/1.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.1.34.64/32), bidir, uptime: 3d05h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 225.1.60.208/32), bidir, uptime: 3d05h, pim ip
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:06:39, pim
+	    Ethernet1/35/1, uptime: 04:24:48, pim
+	 
+	(*, 225.1.142.160/32), bidir, uptime: 3d05h, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/5.4, uptime: 04:32:18, igmp
+	 
+	(*, 232.0.0.0/8), uptime: 2w0d, pim ip
+	  Incoming interface: Null, RPF nbr: 0.0.0.0, uptime: 2w0d
+	  Outgoing interface list: (count: 0)
+	 
+	(*, 239.255.255.240/28), bidir, uptime: 2w0d, pim ip
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 0)
+	 
+	(*, 239.255.255.240/32), bidir, uptime: 1w4d, ip pim igmp
+	  Incoming interface: loopback100, RPF nbr: 10.96.1.233, uptime: 04:32:18
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:06:58, pim
+	    Ethernet1/1.4, uptime: 04:32:18, igmp
+	 
+	IPN-POD1-02# sh ip igmp groups vrf fabric-mpod
+	IGMP Connected Group Membership for VRF "fabric-mpod" - 3 total entries
+	Type: S - Static, D - Dynamic, L - Local, T - SSM Translated
+	Group Address      Type Interface           Uptime    Expires   Last Reporter
+	225.0.13.224       D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	225.0.149.0        D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	225.1.60.208       D    Ethernet1/5.4       04:07:57  00:04:19  10.96.1.242
+	 
+	IPN-POD1-02# sh ip mroute vrf fabric-mpod
+	IP Multicast Routing Table for VRF "fabric-mpod"
+	 
+	(*, 225.0.0.0/8), bidir, uptime: 04:13:27, pim ip
+	  Incoming interface: port-channel10, RPF nbr: 10.96.1.237, uptime: 04:13:08
+	  Outgoing interface list: (count: 1)
+	    port-channel10, uptime: 04:13:08, pim, (RPF)
+	 
+	(*, 225.0.13.224/32), bidir, uptime: 04:08:24, igmp ip pim
+	  Incoming interface: port-channel10, RPF nbr: 10.96.1.237, uptime: 04:08:24
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:08:24, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:08:24, igmp
+	 
+	(*, 225.0.149.0/32), bidir, uptime: 04:08:24, igmp ip pim
+	  Incoming interface: port-channel10, RPF nbr: 10.96.1.237, uptime: 04:08:24
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:08:24, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:08:24, igmp
+	 
+	(*, 225.1.60.208/32), bidir, uptime: 04:08:24, igmp ip pim
+	  Incoming interface: port-channel10, RPF nbr: 10.96.1.237, uptime: 04:08:24
+	  Outgoing interface list: (count: 2)
+	    port-channel10, uptime: 04:08:24, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:08:24, igmp
+	 
+	(*, 232.0.0.0/8), uptime: 1w3d, pim ip
+	  Incoming interface: Null, RPF nbr: 0.0.0.0, uptime: 1w3d
+	  Outgoing interface list: (count: 0)
+	 
+	(*, 239.255.255.240/28), bidir, uptime: 04:13:27, pim ip
+	  Incoming interface: port-channel10, RPF nbr: 10.96.1.237, uptime: 04:13:08
+	  Outgoing interface list: (count: 1)
+	    port-channel10, uptime: 04:13:08, pim, (RPF)
+	 
+	IPN-POD2-01# sh ip mroute vrf fabric-mpod
+	IP Multicast Routing Table for VRF "fabric-mpod"
+	 
+	(*, 225.0.0.0/8), bidir, uptime: 04:27:28, pim ip
+	  Incoming interface: Ethernet1/35/1, RPF nbr: 10.96.255.253, uptime: 04:27:28
+	  Outgoing interface list: (count: 1)
+	    Ethernet1/35/1, uptime: 04:27:28, pim, (RPF)
+	 
+	(*, 225.0.13.224/32), bidir, uptime: 04:27:28, igmp ip pim
+	  Incoming interface: Ethernet1/35/1, RPF nbr: 10.96.255.253, uptime: 04:27:28
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/35/1, uptime: 04:27:28, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:27:28, igmp
+	 
+	(*, 225.0.149.0/32), bidir, uptime: 04:27:27, igmp ip pim
+	  Incoming interface: Ethernet1/35/1, RPF nbr: 10.96.255.253, uptime: 04:27:27
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/35/1, uptime: 04:27:27, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:27:27, igmp
+	 
+	(*, 225.1.60.208/32), bidir, uptime: 04:27:26, igmp ip pim
+	  Incoming interface: Ethernet1/35/1, RPF nbr: 10.96.255.253, uptime: 04:27:26
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/35/1, uptime: 04:27:26, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:27:26, igmp
+	 
+	(*, 232.0.0.0/8), uptime: 2w0d, pim ip
+	  Incoming interface: Null, RPF nbr: 0.0.0.0, uptime: 2w0d
+	  Outgoing interface list: (count: 0)
+	 
+	(*, 239.255.255.240/28), bidir, uptime: 04:27:26, pim ip
+	  Incoming interface: Ethernet1/35/1, RPF nbr: 10.96.255.253, uptime: 04:27:26
+	  Outgoing interface list: (count: 1)
+	    Ethernet1/35/1, uptime: 04:27:26, pim, (RPF)
+	 
+	IPN-POD2-02# sh ip mroute vrf fabric-mpod
+	IP Multicast Routing Table for VRF "fabric-mpod"
+	 
+	(*, 225.0.0.0/8), bidir, uptime: 04:13:00, pim ip
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:11:33
+	  Outgoing interface list: (count: 1)
+	    Ethernet1/36/1, uptime: 04:11:33, pim, (RPF)
+	 
+	(*, 225.0.0.0/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/1.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.0.59.64/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/1.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.0.87.176/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.0.156.48/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.0.174.32/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.0.238.32/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.1.34.64/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/5.4, uptime: 04:10:43, igmp
+	 
+	(*, 225.1.142.160/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/1.4, uptime: 04:10:43, igmp
+	 
+	(*, 232.0.0.0/8), uptime: 1w3d, pim ip
+	  Incoming interface: Null, RPF nbr: 0.0.0.0, uptime: 1w3d
+	  Outgoing interface list: (count: 0)
+ 
+	(*, 239.255.255.240/28), bidir, uptime: 04:13:00, pim ip
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:11:33
+	  Outgoing interface list: (count: 1)
+	    Ethernet1/36/1, uptime: 04:11:33, pim, (RPF)
+	 
+	(*, 239.255.255.240/32), bidir, uptime: 04:10:43, igmp ip pim
+	  Incoming interface: Ethernet1/36/1, RPF nbr: 10.96.255.249, uptime: 04:10:43
+	  Outgoing interface list: (count: 2)
+	    Ethernet1/36/1, uptime: 04:10:43, pim, (RPF)
+	    Ethernet1/1.4, uptime: 04:10:43, igmp
+Use the above IGMP & PIM commands to work hop by hop if you are having issues between pods to validate the IGMP to PIM and PIM to RP and back from RP towards the IGMP Join locations.
+
+<h4>Configurations</h4>
+
+The following configuration is stripped to the essentials for IPN, it shows IPN-POD1-01 but can be used for all IPN devices with the exception of loopback 100 where this is only required for devices acting as RP’s. IPN-POD1-02 has the back up RP task, this is achieved by configuring interface loopback 100 as in the configuration below but with a mask of /30 which includes the RP address configured on IPN-POD1-01 but has a host address of another IP in that network. PIM Bi-dir RP’s don’t hold state and therefore there is not really an RP, its about getting multicast traffic sent to a root device which using the multicast table sends the traffic back down the PIM tree. the /32 is a longer prefix so will be preferred and as the backup RP is not configured with a host address the same we don’t have to worry about host routes being installed in the backup RP routing table and causing multicast breaks due to local device host routes. DHCP relay needs to be configured or POD2 will not get DHCP addresses and it wont come up. It is important to note that the DHCP relay addresses are the APIC IP addresses and are the IP addresses on the interfaces in the VRF ‘overlay-1’ which is part of the infra address ranges configured during setup, NOT the ‘OOB’ interface addresses.
+
+	hostname IPN-POD1-01
+ 
+	feature ospf
+	feature pim
+	feature dhcp
+	feature lldp
+	 
+	system jumbomtu 9150
+	interface breakout module 1 port 35-36 map 10g-4x
+	 
+	ip pim mtu 9000
+	vlan 1
+	 
+	service dhcp
+	ip dhcp relay
+	no ipv6 dhcp relay
+	vrf context fabric-mpod
+	  ip pim rp-address 10.96.1.233 group-list 225.0.0.0/8 bidir
+	  ip pim rp-address 10.96.1.233 group-list 239.255.255.240/28 bidir
+	 
+	interface Ethernet1/1
+	  description 40G link to POD1-SPINE-101(1/36)
+	  mtu 9150
+	  vrf member fabric-mpod
+	  no shutdown
+	 
+	interface Ethernet1/1.4
+	  description 40G link to POD1-SPINE-101(1/36)
+	  mtu 9150
+	  encapsulation dot1q 4
+	  vrf member fabric-mpod
+	  ip address 10.96.1.253/30
+	  ip ospf network point-to-point
+	  ip ospf mtu-ignore
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  ip dhcp relay address 10.101.0.1 
+	  ip dhcp relay address 10.101.0.2 
+	  no shutdown
+	 
+	interface Ethernet1/5
+	  description 40G link to POD1-SPINE-102(1/36)
+	  mtu 9150
+	  vrf member fabric-mpod
+	  no shutdown
+	 
+	interface Ethernet1/5.4
+	  description 40G link POD1-SPINE-102(1/36)
+	  mtu 9150
+	  encapsulation dot1q 4
+	  vrf member fabric-mpod
+	  ip address 10.96.1.249/30
+	  ip ospf network point-to-point
+	  ip ospf mtu-ignore
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  ip dhcp relay address 10.101.0.1 
+	  ip dhcp relay address 10.101.0.2 
+	  no shutdown  
+	 
+	interface Ethernet1/27
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  channel-group 10
+	  no shutdown
+	 
+	interface Ethernet1/28
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  channel-group 10
+	  no shutdown
+	 
+	interface Ethernet1/35/1
+	  description 10G Link (WAN) to IPN-POD2-01(1/35/1)
+	  speed 10000
+	  duplex full
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 10.96.255.253/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  no shutdown
+	 
+	interface Ethernet1/36/1
+	  description 10G Link (WAN) to IPN-POD2-02(1/36/1)
+	  speed 10000
+	  duplex full
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 10.96.255.249/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  no shutdown
+	 
+	interface loopback96
+	  vrf member fabric-mpod
+	  ip address 10.96.1.1/32
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	 
+	interface loopback100
+	  vrf member fabric-mpod
+	  ip address 10.96.1.233/32
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	 
+	 interface Port-channel10
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 100.96.1.237/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	   
+	router ospf a1
+	  vrf fabric-mpod
+	   router-id 10.96.1.1
+	    log-adjacency-changes detail
