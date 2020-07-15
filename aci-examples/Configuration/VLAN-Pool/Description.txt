@@ -1,0 +1,3 @@
+VLAN-Pool:
+
+The provider access function is defined when the hypervisor is using an encapsulation protocol, such as VxLAN/NVGRE, and provides the policies to impacting VxLAN/NvGRE packets from NVGRE. You do not need to provide the encapsulation VLAN and endpoint for the provider access function. The system uses the Infra VLAN (provided during APIC bootup) as the encapsulation and associates it to the default endpoint group under the default tenant. This section describe how you can manage and configure VLAN-pool on APIC using different configuration management code snippet.

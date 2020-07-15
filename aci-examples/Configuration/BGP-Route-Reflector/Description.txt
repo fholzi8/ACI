@@ -1,0 +1,3 @@
+BGP Route Reflector Policy Panel:
+
+The BGP Instance level policy is used to configure MP-BGP policies inside the fabric. The MP-BGP Route Reflector End Point Policy, which is used to specify Route Reflector Nodes/Spines for the MP-BGP running inside the fabric. This section describe how you can manage and configure BGP Route Reflector on APIC using different configuration management code snippet.

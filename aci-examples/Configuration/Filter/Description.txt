@@ -1,0 +1,3 @@
+Filter:
+
+A filter policy, which is a group of resolvable filter entries. Each filter entry is a combination of network traffic classification properties. This section describe how you can manage and configure filter on APIC using different configuration management code snippet.

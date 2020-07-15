@@ -1,0 +1,3 @@
+Network:
+
+A network is a layer 3 context (a VRF) that provides IP address space isolation for tenants. This section describe how you can manage and configure network on APIC using different configuration management code snippet.

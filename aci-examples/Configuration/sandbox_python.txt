@@ -1,0 +1,45 @@
+# Installation
+
+## Environment
+
+Required
+
+* Python 2.7+
+* [setuptools package](https://pypi.python.org/pypi/setuptools)
+
+## Downloading
+
+If you have git installed, clone the repository
+
+    git clone https://github.com/datacenter/acitoolkit.git
+
+## Installing
+
+After downloading, install using setuptools.
+
+    cd acitoolkit
+    python setup.py install
+
+If you plan on modifying the actual toolkit files, you should install the developer environment that will link the package installation to your development directory.
+
+    cd acitoolkit
+    python setup.py develop
+
+
+# ACI Toolkit Samples #
+
+This directory contains sample scripts that use the python library.
+
+### Set up ###
+
+In order to use the examples in this directory, it is important to set the PYTHONPATH variable to include the path to the ACI toolkit or have installed the acitoolkit using setup.py.
+
+### credentials.py ###
+
+Many of the samples in this directory use the file credentials.py to login to the APIC.  Before running, edit the credentials.py with the username, password, and IP address for your environment.
+
+## To execute the sample files
+
+    1.	cd samples
+    2.	vi example.py (Copy the script here)
+    3.	Execute the script. example: python example.py

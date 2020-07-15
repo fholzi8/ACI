@@ -1,0 +1,3 @@
+Bridge Domain:
+
+A bridge domain represents a L2 forwarding construct within the fabric. This section describe how you can manage and configure Bridge Domain on APIC using different configuration management code snippet.

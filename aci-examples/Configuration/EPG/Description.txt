@@ -1,0 +1,3 @@
+EPG(endpoint group):
+
+An EPG is a service contract/deal between two or more participating peer entities. This section describe how you can manage and configure EPG on APIC using different configuration management code snippet.

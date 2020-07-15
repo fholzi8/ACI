@@ -1,0 +1,3 @@
+Routed L3 Network:
+
+Layer 3 networks that are outside the 'fabric' by configuring the Tenant applications. This section describe how you can manage and configure routed L3 network on APIC using different configuration management code snippet.

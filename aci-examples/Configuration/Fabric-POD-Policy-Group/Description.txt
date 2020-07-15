@@ -1,0 +1,3 @@
+Fabric Policy:
+
+Fabric policies govern the operation of internal fabric interfaces. The system provides default fabric policies. Fabric policies enable configuring various functions or protocols. Administrators who have fabric administrator privileges can create new fabric policies according to their requirements. The APIC enables administrators to select the pods, leaf switches, and interfaces to which they will apply access policies. This section describe how you can manage and configure fabric policy on APIC using different configuration management code snippet.

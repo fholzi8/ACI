@@ -1,0 +1,3 @@
+Attachable Access Entity Profile Panel:
+
+The attached entity profile provides a template to deploy hypervisor policies on a large set of leaf ports. This also provides the association of a Virtual Machine Management (VMM) domain and the physical network infrastructure. This section describe how you can manage and configure AEP's on APIC using different configuration management code snippet.

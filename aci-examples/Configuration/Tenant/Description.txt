@@ -1,0 +1,3 @@
+Tenant:
+
+A tenant is a logical container for application policies that enable an administrator to exercise domain-based access control. A tenant represents a unit of isolation from a policy perspective, but it does not represent a private network. Tenants can represent a customer in a service provider setting, an organization or domain in an enterprise setting, or just a convenient grouping of policies. This section describe how you can manage and configure tenant on APIC using different configuration management code snippet.

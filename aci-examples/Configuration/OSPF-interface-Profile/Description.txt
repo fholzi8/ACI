@@ -1,0 +1,3 @@
+OSPF Interface Profile:
+
+The OSPF interface profile, which enables OSPF on the interface. Optionally, the OSPF interface profile can have a relation to an OSPF interface policy for more granular control over interface proprieties. This section describe how you can manage and configure OSPF interface profile on APIC using different configuration management code snippet.

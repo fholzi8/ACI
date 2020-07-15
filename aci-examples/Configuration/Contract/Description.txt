@@ -1,0 +1,3 @@
+Contract:
+
+A contract profile, which is a service contract that can exist between two or more participating peer entities. This section describe how you can manage and configure contracts on APIC using different configuration management code snippet.

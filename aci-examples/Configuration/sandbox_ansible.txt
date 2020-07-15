@@ -1,0 +1,43 @@
+Following steps would execute the playbook files on APIC.
+
+
+1. SSH to toolserver host using provided credentials. (If credentials are not provided Default username is ‘cisco’ and password ‘cisco123’
+
+2. Follow the steps in the below link to install aci-cobra SDK:
+ http://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/python/install/b_Install_Cisco_APIC_Python_SDK_Standalone.html
+
+
+2. Do a git clone of "https://github.com/jedelman8/aci-ansible".
+
+3. Create Two New Directories
+
+toolserver:~$ sudo mkdir -p /etc/ansible
+
+toolserver:~$ sudo mkdir -p /usr/share/ansible
+
+4. Move Modules and Config to New Directories
+
+toolserver:~$ sudo mv aci-ansible/files/ansible.cfg /etc/ansible/ansible.cfg
+
+toolserver:~$ sudo mv aci-ansible/library/ /usr/share/ansible/cisco_aci
+
+2. Go to /home/cisco/aci-ansible directory. Edit hosts file and add the list of hosts / device names under switches section.
+   Note: device or host names must be added in /etc/hosts file
+
+   Example: vi hosts under /home/cisco/aci-ansible. Then add below contents
+     apic1                     # single APIC in system- can also use IP if no DNS or /etc/hosts isn't setup
+
+
+     [all:vars]
+	 user = 'admin'
+     pass = 'C!sc0123'
+   
+   Note: Make sure "apic1" name is added in /etc/hosts and /etc/hosts should contain "APIC_IP  apic1". Replace the IP of the apic with APIC_IP
+   
+3. Copy the respective playbook scripts to /home/USER/aci-ansible/apic-playbook directory (replace the username with USER). Supppose you want to configure interface, then create a .yml file using vi editor and paste the playbook scripts to it.
+
+4. Save and exit
+
+5. Run "ansible-playbook -i hosts apic-playbook/PLAYBOOK_FILE_NAME.yml"
+   Example:
+   $ ansible-playbook -i hosts apic-playbook/interface.yml

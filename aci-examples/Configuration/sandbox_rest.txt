@@ -1,0 +1,35 @@
+Setup postman Code snippet:
+In order to execute the ACI-REST from postman the login needs to be performed first. The cookie would get generated
+and stored for subsequent execution.
+
+POST-URL : http://APIC-IP/api/aaaLogin.json
+Content-Type: application/json
+POST BODY :
+{
+	"aaaUser" : {
+		"attributes" : {
+			"name" : "APIC_USER",
+			"pwd" : "APIC_PASSWORD"
+		}
+	}
+}
+
+Executing ACI-REST using postman for first time:
+
+1. Copy POST URL, mentioned in 'setup postman' section above, after replacing APIC-IP with IP address of APIC.
+2. Select method as POST
+3. Open raw JSON section.
+4. Copy POST-BODY JSON to raw JSON body section of postman.
+5. Replace APIC_USERNAME with apic user.
+6. Replace APIC_PASSWORD with apic password.
+7. Click send button
+
+Note: If the cookie gets expired you might have to perform the above steps again.
+
+For subsequent REST call:
+
+1. Copy POST URL, after replacing APIC-IP with IP address of APIC.
+2. Select method as POST
+3. Open raw JSON section.
+4. Copy POST-BODY JSON to raw JSON body section of postman.
+5. Click send button
