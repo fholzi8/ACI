@@ -22,28 +22,28 @@ The only IPN requirements at layer 2 are to use VLAN 4 and increase the MTU. The
 The only IPN requirements at layer 2 are to use VLAN 4 and increase the MTU. The VLAN requirement is for 802.1q between the spine and the IPN devices and to use encapsulation dot1q 4 on these sub-interfaces, additionally the system and L3 interface MTU must be set to 9150 as follows.
 
 
-1	!
-2	system jumbomtu 9150
-3	!
-4	interface Ethernetx...
-5	 desc any interface carrying IPN traffic
-6	 mtu 9150    
+	!
+	system jumbomtu 9150
+	!
+	interface Ethernetx...
+	 desc any interface carrying IPN traffic
+	 mtu 9150    
  
 <h4>IPN L3
 VRF</h4>
 We have VRF’s configured on this deployment and this is also a recommended configuration by Cisco though not technically required but is good practice as we want to isolate the IPN traffic from interruption certainly if the IPN devices are used for other services and route table changes could break IPN connectivity. Using VRFs requires all interfaces (or sub-interfaces) including dedicated IPN loopbacks to be in the VRF as well as a separate OSPF process  in that VRF. The PIM RP address will be configured in the VRF too and is discussed in the multicast section in this post. The VRF in this deployment is called ‘fabric-mpod’, this VRF is not configured in the APIC, it only exists on the IPN devices encompassing VLAN 4.
 
 
-1	vrf context fabric-mpod
-2	!
-3	interface loopback yy
-4	  vrf member fabric-mpod
-5	!
-6	interface Ethernetx...
-7	  vrf member fabric-mpod
-8	!
-9	router ospf a1
-10	  vrf fabric-mpod
+	vrf context fabric-mpod
+	!
+	interface loopback yy
+	  vrf member fabric-mpod
+	!
+	interface Ethernetx...
+	  vrf member fabric-mpod
+	!
+	router ospf a1
+	  vrf fabric-mpod
  
 <h4>Addressing</h4>
 IP addressing for the WAN and IPN POD to Spine  has been taken from a RFC 1918 range, the allocated range has been split in to three class C networks (/24), one each for:
