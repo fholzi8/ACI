@@ -1,0 +1,72 @@
+<polUni>
+    <fvTenant name="TEN_ADMINISTRATION">
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_COUNTRY">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_INTERNATIONAL">
+        <fvCtx name="VRF_FDH_COMADS01" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DCS" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_MANAGEMENT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_PEER_KEEPALIVE" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_VOIDIV01" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_ZEU" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_MAN_COMADS01" descr="Manching" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_MAN_DEFAULT" descr="Manching" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_MAN_MAS" descr="Manching" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_MAN_N01" descr="Manching" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_MAN_SUZ" descr="Manching" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_COMAHQ01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_COMAIW01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_COMAST01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_COMDAS01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_MANAGEMENT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_OTHGUE01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_PEER_KEEPALIVE" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_RESAHQ01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_RESAHQ02" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_RESAST01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_RESDAS01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_VOIAHQ01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_VOIAST01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_VOIDAS01" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_VOIDAS02" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_OTN_WIFIDAS1" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_ULM_COMADS01" descr="Ulm" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_ULM_DCS" descr="Ulm" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_ULM_DEFAULT" descr="Ulm" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_ULM_WIFIDAS01" descr="Ulm" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_NONSTANDARD">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_NONSTANDARD_CLIENTS">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_PROJECT">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_SHARED_SERVICES">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_STANDARD_CLIENTS">
+        <fvCtx name="VRF_OTN_DEFAULT" descr="Ottobrunn" pcEnfPref="unenforced"/>
+        <fvCtx name="VRF_FDH_DEFAULT" descr="Friedrichshafen" pcEnfPref="unenforced"/>
+    </fvTenant>
+</polUni>

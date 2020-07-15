@@ -1,0 +1,122 @@
+
+    <polUni>
+    <fvTenant name="mgmt">
+    <mgmtMgmtP name="default">
+        <!-- Inband mgmt ipv4 -->
+        <mgmtInB name="EPG_INB_MGMT">
+        
+        <!-- ADD APICS -->
+         
+            <mgmtRsInBStNode addr="10.243.69.101/24" gw="10.243.69.254" tDn="topology/pod-1/node-101"/> 
+            <mgmtRsInBStNode addr="10.243.69.102/24" gw="10.243.69.254" tDn="topology/pod-1/node-102"/> 
+            <mgmtRsInBStNode addr="10.243.69.201/24" gw="10.243.69.254" tDn="topology/pod-1/node-201"/> 
+            <mgmtRsInBStNode addr="10.243.69.202/24" gw="10.243.69.254" tDn="topology/pod-1/node-202"/> 
+            <mgmtRsInBStNode addr="10.243.69.203/24" gw="10.243.69.254" tDn="topology/pod-1/node-203"/> 
+            <mgmtRsInBStNode addr="10.243.69.204/24" gw="10.243.69.254" tDn="topology/pod-1/node-204"/> 
+            <mgmtRsInBStNode addr="10.243.69.205/24" gw="10.243.69.254" tDn="topology/pod-1/node-205"/> 
+            <mgmtRsInBStNode addr="10.243.69.206/24" gw="10.243.69.254" tDn="topology/pod-1/node-206"/> 
+            <mgmtRsInBStNode addr="10.243.69.207/24" gw="10.243.69.254" tDn="topology/pod-1/node-207"/> 
+            <mgmtRsInBStNode addr="10.243.69.208/24" gw="10.243.69.254" tDn="topology/pod-1/node-208"/> 
+            <mgmtRsInBStNode addr="10.243.69.209/24" gw="10.243.69.254" tDn="topology/pod-1/node-209"/> 
+            <mgmtRsInBStNode addr="10.243.69.210/24" gw="10.243.69.254" tDn="topology/pod-1/node-210"/> 
+            <mgmtRsInBStNode addr="10.243.69.211/24" gw="10.243.69.254" tDn="topology/pod-1/node-211"/> 
+            <mgmtRsInBStNode addr="10.243.69.212/24" gw="10.243.69.254" tDn="topology/pod-1/node-212"/> 
+            <mgmtRsInBStNode addr="10.243.69.213/24" gw="10.243.69.254" tDn="topology/pod-1/node-213"/> 
+            <mgmtRsInBStNode addr="10.243.69.214/24" gw="10.243.69.254" tDn="topology/pod-1/node-214"/> 
+            <mgmtRsInBStNode addr="10.243.69.215/24" gw="10.243.69.254" tDn="topology/pod-1/node-215"/> 
+            <mgmtRsInBStNode addr="10.243.69.216/24" gw="10.243.69.254" tDn="topology/pod-1/node-216"/> 
+            <mgmtRsInBStNode addr="10.243.69.217/24" gw="10.243.69.254" tDn="topology/pod-1/node-217"/> 
+            <mgmtRsInBStNode addr="10.243.69.218/24" gw="10.243.69.254" tDn="topology/pod-1/node-218"/> 
+            <mgmtRsInBStNode addr="10.243.69.219/24" gw="10.243.69.254" tDn="topology/pod-1/node-219"/> 
+            <mgmtRsInBStNode addr="10.243.69.220/24" gw="10.243.69.254" tDn="topology/pod-1/node-220"/> 
+            <mgmtRsInBStNode addr="10.243.69.221/24" gw="10.243.69.254" tDn="topology/pod-1/node-221"/> 
+            <mgmtRsInBStNode addr="10.243.69.222/24" gw="10.243.69.254" tDn="topology/pod-1/node-222"/> 
+            <mgmtRsInBStNode addr="10.243.69.223/24" gw="10.243.69.254" tDn="topology/pod-1/node-223"/> 
+            <mgmtRsInBStNode addr="10.243.69.224/24" gw="10.243.69.254" tDn="topology/pod-1/node-224"/> 
+            <mgmtRsInBStNode addr="10.243.69.225/24" gw="10.243.69.254" tDn="topology/pod-1/node-225"/> 
+            <mgmtRsInBStNode addr="10.243.69.226/24" gw="10.243.69.254" tDn="topology/pod-1/node-226"/> 
+            <mgmtRsInBStNode addr="10.243.69.227/24" gw="10.243.69.254" tDn="topology/pod-1/node-227"/> 
+            <mgmtRsInBStNode addr="10.243.69.228/24" gw="10.243.69.254" tDn="topology/pod-1/node-228"/> 
+            <mgmtRsInBStNode addr="10.243.69.229/24" gw="10.243.69.254" tDn="topology/pod-1/node-229"/> 
+            <mgmtRsInBStNode addr="10.243.69.230/24" gw="10.243.69.254" tDn="topology/pod-1/node-230"/> 
+            <mgmtRsInBStNode addr="10.243.69.231/24" gw="10.243.69.254" tDn="topology/pod-1/node-231"/> 
+            <mgmtRsInBStNode addr="10.243.69.232/24" gw="10.243.69.254" tDn="topology/pod-1/node-232"/> 
+            <mgmtRsInBStNode addr="10.243.69.233/24" gw="10.243.69.254" tDn="topology/pod-1/node-233"/> 
+            <mgmtRsInBStNode addr="10.243.69.234/24" gw="10.243.69.254" tDn="topology/pod-1/node-234"/> 
+            <mgmtRsInBStNode addr="10.243.69.235/24" gw="10.243.69.254" tDn="topology/pod-1/node-235"/> 
+            <mgmtRsInBStNode addr="10.243.69.236/24" gw="10.243.69.254" tDn="topology/pod-1/node-236"/> 
+            <mgmtRsInBStNode addr="10.243.69.237/24" gw="10.243.69.254" tDn="topology/pod-1/node-237"/> 
+            <mgmtRsInBStNode addr="10.243.69.238/24" gw="10.243.69.254" tDn="topology/pod-1/node-238"/> 
+            <mgmtRsInBStNode addr="10.243.69.239/24" gw="10.243.69.254" tDn="topology/pod-1/node-239"/> 
+            <mgmtRsInBStNode addr="10.243.69.240/24" gw="10.243.69.254" tDn="topology/pod-1/node-240"/> 
+            <mgmtRsInBStNode addr="10.243.69.241/24" gw="10.243.69.254" tDn="topology/pod-1/node-241"/> 
+            <mgmtRsInBStNode addr="10.243.69.242/24" gw="10.243.69.254" tDn="topology/pod-1/node-242"/> 
+            <mgmtRsInBStNode addr="10.243.69.243/24" gw="10.243.69.254" tDn="topology/pod-1/node-243"/> 
+            <mgmtRsInBStNode addr="10.243.69.244/24" gw="10.243.69.254" tDn="topology/pod-1/node-244"/> 
+            <mgmtRsInBStNode addr="10.243.69.245/24" gw="10.243.69.254" tDn="topology/pod-1/node-245"/> 
+            <mgmtRsInBStNode addr="10.243.69.246/24" gw="10.243.69.254" tDn="topology/pod-1/node-246"/>
+        </mgmtInB>
+        
+
+        <!-- OOB mgmt ipv4 -->
+        <mgmtOoB name="default">
+        
+        <!-- ADD APICS -->
+         
+            <mgmtRsOoBStNode addr="10.243.68.101/24" gw="10.243.68.254" tDn="topology/pod-1/node-101"/> 
+            <mgmtRsOoBStNode addr="10.243.68.102/24" gw="10.243.68.254" tDn="topology/pod-1/node-102"/> 
+            <mgmtRsOoBStNode addr="10.243.68.201/24" gw="10.243.68.254" tDn="topology/pod-1/node-201"/> 
+            <mgmtRsOoBStNode addr="10.243.68.202/24" gw="10.243.68.254" tDn="topology/pod-1/node-202"/> 
+            <mgmtRsOoBStNode addr="10.243.68.203/24" gw="10.243.68.254" tDn="topology/pod-1/node-203"/> 
+            <mgmtRsOoBStNode addr="10.243.68.204/24" gw="10.243.68.254" tDn="topology/pod-1/node-204"/> 
+            <mgmtRsOoBStNode addr="10.243.68.205/24" gw="10.243.68.254" tDn="topology/pod-1/node-205"/> 
+            <mgmtRsOoBStNode addr="10.243.68.206/24" gw="10.243.68.254" tDn="topology/pod-1/node-206"/> 
+            <mgmtRsOoBStNode addr="10.243.68.207/24" gw="10.243.68.254" tDn="topology/pod-1/node-207"/> 
+            <mgmtRsOoBStNode addr="10.243.68.208/24" gw="10.243.68.254" tDn="topology/pod-1/node-208"/> 
+            <mgmtRsOoBStNode addr="10.243.68.209/24" gw="10.243.68.254" tDn="topology/pod-1/node-209"/> 
+            <mgmtRsOoBStNode addr="10.243.68.210/24" gw="10.243.68.254" tDn="topology/pod-1/node-210"/> 
+            <mgmtRsOoBStNode addr="10.243.68.211/24" gw="10.243.68.254" tDn="topology/pod-1/node-211"/> 
+            <mgmtRsOoBStNode addr="10.243.68.212/24" gw="10.243.68.254" tDn="topology/pod-1/node-212"/> 
+            <mgmtRsOoBStNode addr="10.243.68.213/24" gw="10.243.68.254" tDn="topology/pod-1/node-213"/> 
+            <mgmtRsOoBStNode addr="10.243.68.214/24" gw="10.243.68.254" tDn="topology/pod-1/node-214"/> 
+            <mgmtRsOoBStNode addr="10.243.68.215/24" gw="10.243.68.254" tDn="topology/pod-1/node-215"/> 
+            <mgmtRsOoBStNode addr="10.243.68.216/24" gw="10.243.68.254" tDn="topology/pod-1/node-216"/> 
+            <mgmtRsOoBStNode addr="10.243.68.217/24" gw="10.243.68.254" tDn="topology/pod-1/node-217"/> 
+            <mgmtRsOoBStNode addr="10.243.68.218/24" gw="10.243.68.254" tDn="topology/pod-1/node-218"/> 
+            <mgmtRsOoBStNode addr="10.243.68.219/24" gw="10.243.68.254" tDn="topology/pod-1/node-219"/> 
+            <mgmtRsOoBStNode addr="10.243.68.220/24" gw="10.243.68.254" tDn="topology/pod-1/node-220"/> 
+            <mgmtRsOoBStNode addr="10.243.68.221/24" gw="10.243.68.254" tDn="topology/pod-1/node-221"/> 
+            <mgmtRsOoBStNode addr="10.243.68.222/24" gw="10.243.68.254" tDn="topology/pod-1/node-222"/> 
+            <mgmtRsOoBStNode addr="10.243.68.223/24" gw="10.243.68.254" tDn="topology/pod-1/node-223"/> 
+            <mgmtRsOoBStNode addr="10.243.68.224/24" gw="10.243.68.254" tDn="topology/pod-1/node-224"/> 
+            <mgmtRsOoBStNode addr="10.243.68.225/24" gw="10.243.68.254" tDn="topology/pod-1/node-225"/> 
+            <mgmtRsOoBStNode addr="10.243.68.226/24" gw="10.243.68.254" tDn="topology/pod-1/node-226"/> 
+            <mgmtRsOoBStNode addr="10.243.68.227/24" gw="10.243.68.254" tDn="topology/pod-1/node-227"/> 
+            <mgmtRsOoBStNode addr="10.243.68.228/24" gw="10.243.68.254" tDn="topology/pod-1/node-228"/> 
+            <mgmtRsOoBStNode addr="10.243.68.229/24" gw="10.243.68.254" tDn="topology/pod-1/node-229"/> 
+            <mgmtRsOoBStNode addr="10.243.68.230/24" gw="10.243.68.254" tDn="topology/pod-1/node-230"/> 
+            <mgmtRsOoBStNode addr="10.243.68.231/24" gw="10.243.68.254" tDn="topology/pod-1/node-231"/> 
+            <mgmtRsOoBStNode addr="10.243.68.232/24" gw="10.243.68.254" tDn="topology/pod-1/node-232"/> 
+            <mgmtRsOoBStNode addr="10.243.68.233/24" gw="10.243.68.254" tDn="topology/pod-1/node-233"/> 
+            <mgmtRsOoBStNode addr="10.243.68.234/24" gw="10.243.68.254" tDn="topology/pod-1/node-234"/> 
+            <mgmtRsOoBStNode addr="10.243.68.235/24" gw="10.243.68.254" tDn="topology/pod-1/node-235"/> 
+            <mgmtRsOoBStNode addr="10.243.68.236/24" gw="10.243.68.254" tDn="topology/pod-1/node-236"/> 
+            <mgmtRsOoBStNode addr="10.243.68.237/24" gw="10.243.68.254" tDn="topology/pod-1/node-237"/> 
+            <mgmtRsOoBStNode addr="10.243.68.238/24" gw="10.243.68.254" tDn="topology/pod-1/node-238"/> 
+            <mgmtRsOoBStNode addr="10.243.68.239/24" gw="10.243.68.254" tDn="topology/pod-1/node-239"/> 
+            <mgmtRsOoBStNode addr="10.243.68.240/24" gw="10.243.68.254" tDn="topology/pod-1/node-240"/> 
+            <mgmtRsOoBStNode addr="10.243.68.241/24" gw="10.243.68.254" tDn="topology/pod-1/node-241"/> 
+            <mgmtRsOoBStNode addr="10.243.68.242/24" gw="10.243.68.254" tDn="topology/pod-1/node-242"/> 
+            <mgmtRsOoBStNode addr="10.243.68.243/24" gw="10.243.68.254" tDn="topology/pod-1/node-243"/> 
+            <mgmtRsOoBStNode addr="10.243.68.244/24" gw="10.243.68.254" tDn="topology/pod-1/node-244"/> 
+            <mgmtRsOoBStNode addr="10.243.68.245/24" gw="10.243.68.254" tDn="topology/pod-1/node-245"/> 
+            <mgmtRsOoBStNode addr="10.243.68.246/24" gw="10.243.68.254" tDn="topology/pod-1/node-246"/> 
+            <mgmtRsOoBStNode addr="10.243.68.110/24" gw="10.243.68.254" tDn="topology/pod-2/node-107"/> 
+            <mgmtRsOoBStNode addr="10.243.68.111/24" gw="10.243.68.254" tDn="topology/pod-2/node-108"/> 
+            <mgmtRsOoBStNode addr="10.243.68.112/24" gw="10.243.68.254" tDn="topology/pod-2/node-501"/> 
+            <mgmtRsOoBStNode addr="10.243.68.113/24" gw="10.243.68.254" tDn="topology/pod-2/node-502"/>
+        </mgmtOoB>
+         
+    </mgmtMgmtP>
+    </fvTenant>
+	</polUni>

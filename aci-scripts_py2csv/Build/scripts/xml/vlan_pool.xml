@@ -1,0 +1,61 @@
+<polUni><infraInfra>
+    <fvnsVlanInstP name="VLANP_MPOD" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_4_4" descr="" from="vlan-4" to="vlan-4" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_OTN_STATIC" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_100_599" descr="" from="vlan-100" to="vlan-599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_FDH_STATIC" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_600_799" descr="" from="vlan-600" to="vlan-799" role="external"/>
+            <fvnsEncapBlk name="VLAN_100_599" descr="" from="vlan-100" to="vlan-599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_MAN_STATIC" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_800_1099" descr="" from="vlan-800" to="vlan-1099" role="external"/>
+            <fvnsEncapBlk name="VLAN_100_599" descr="" from="vlan-100" to="vlan-599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_ULM_STATIC" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_1100_1249" descr="" from="vlan-1100" to="vlan-1249" role="external"/>
+            <fvnsEncapBlk name="VLAN_100_599" descr="" from="vlan-100" to="vlan-599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_BRE_STATIC" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_1250_1399" descr="" from="vlan-1250" to="vlan-1399" role="external"/>
+            <fvnsEncapBlk name="VLAN_100_599" descr="" from="vlan-100" to="vlan-599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_OTN_VMM" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_1400_2399" descr="" from="vlan-1400" to="vlan-2399" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_FDH_VMM" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_2400_2699" descr="" from="vlan-2400" to="vlan-2699" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_MAN_VMM" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_2700_3099" descr="" from="vlan-2700" to="vlan-3099" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_ULM_VMM" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_3100_3399" descr="" from="vlan-3100" to="vlan-3399" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_BRE_VMM" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_3400_3599" descr="" from="vlan-3400" to="vlan-3599" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_L4_L7" descr="" allocMode="dynamic">
+            <fvnsEncapBlk name="VLAN_3600_3799" descr="" from="vlan-3600" to="vlan-3799" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_L3OUT" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_3800_3900" descr="" from="vlan-3800" to="vlan-3900" role="external"/>
+    </fvnsVlanInstP>
+    
+    <fvnsVlanInstP name="VLANP_INB" descr="" allocMode="static">
+            <fvnsEncapBlk name="VLAN_3966_3966" descr="" from="vlan-3966" to="vlan-3966" role="external"/>
+    </fvnsVlanInstP>
+    </infraInfra></polUni>

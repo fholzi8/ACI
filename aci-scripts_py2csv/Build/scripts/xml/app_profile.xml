@@ -1,0 +1,50 @@
+<polUni>
+    <fvTenant name="TEN_ADMINISTRATION">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_COUNTRY">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_INTERNATIONAL">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_NONSTANDARD">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_PROJECT">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_SHARED_SERVICES">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+
+    <fvTenant name="TEN_STANDARD_CLIENTS">
+        <fvAp name="AP_OTN_ALL"/>
+        <fvAp name="AP_FDH_ALL"/>
+        <fvAp name="AP_ULM_ALL"/>
+        <fvAp name="AP_MAN_ALL"/>
+    </fvTenant>
+</polUni>

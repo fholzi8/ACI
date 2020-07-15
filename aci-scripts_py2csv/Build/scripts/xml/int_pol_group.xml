@@ -1,0 +1,1104 @@
+
+<polUni>
+    <infraInfra>
+        <infraAccPortGrp  name="otn_srv_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_srv_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_mgmt_access_1gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="1gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="otn_srv_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_srv_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="otn_srv_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_srv_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="otn_portchannel_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_portchannel_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="otn_portchannel_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_portchannel_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="mpod_100gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="100gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_esx_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_esx_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_l3out_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="otn_l3out_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="otn_l3out_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_l3out_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="otn_l3out_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_otn_l3out_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="fdh_srv_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="fdh_srv_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="fdh_mgmt_access_1gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="1gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="fdh_srv_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_srv_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="fdh_srv_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_srv_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="fdh_portchannel_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_portchannel_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="fdh_portchannel_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_portchannel_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="fdh_esx_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="fdh_esx_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="fdh_l3out_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="fdh_l3out_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="fdh_l3out_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_l3out_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="fdh_l3out_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_fdh_l3out_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="ulm_srv_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="ulm_srv_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="ulm_mgmt_access_1gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="1gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="ulm_srv_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_srv_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="ulm_srv_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_srv_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="ulm_portchannel_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_portchannel_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="ulm_portchannel_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_portchannel_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="ulm_esx_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="ulm_esx_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="ulm_l3out_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="ulm_l3out_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="ulm_l3out_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_l3out_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="ulm_l3out_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_ulm_l3out_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="man_srv_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="man_srv_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="man_mgmt_access_1gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="1gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="man_srv_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_srv_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="man_srv_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_srv_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="man_portchannel_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_portchannel_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="man_portchannel_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName="lacp_active"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_portchannel_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccPortGrp  name="man_esx_access_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="man_esx_access_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="man_l3out_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccPortGrp  name="man_l3out_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+</infraAccPortGrp>
+
+<infraAccBndlGrp  name="man_l3out_vpc_10gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_l3out_vpc_10gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+<infraAccBndlGrp  name="man_l3out_vpc_40gig_ipg" descr="Automated"><infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+<infraRsMcpIfPol tnMcpIfPolName="MCP_ON"/>
+<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+<infraRsStormctrlIfPol tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+<infraRsLacpPol tnLacpLagPolName=""/>
+<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsQosIngressDppIfPol tnQosDppPolName="DPP_NONE"/>
+<infraRsMonIfInfraPol tnMonInfraPolName="default"/>
+<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+<infraRsQosSdIfPol tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+<infraAccBndlSubgrp descr="" name="OPG_LACP_TIMERS_man_l3out_vpc_40gig_ipg">
+    <infraRsLacpInterfacePol tnLacpIfPolName="LACP_FAST_32768"/>
+	<infraRsLacpIfPol tnLacpIfPolName="LACP_FAST_32768"/>
+</infraAccBndlSubgrp>           
+
+</infraAccBndlGrp>
+
+
+     </infraInfra>
+</polUni>

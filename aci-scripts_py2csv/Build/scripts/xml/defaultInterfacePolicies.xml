@@ -1,0 +1,348 @@
+<polUni>
+  <infraInfra>
+
+    <!-- Host Link Level (Port) Policy -->
+
+    <!--    fecMode "inherit" The switch uses FEC based on the port transceiver type. 
+            All copper CR4 transceivers have RSFEC enabled and fiber optic transceivers 
+            have FEC disabled.
+     -->
+    <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_AUTONEG" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_AUTONEG" 
+          descr="Link Auto Negotiate (default)" 
+          autoNeg="on"
+    />    
+
+    <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_100M" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_100M" 
+          descr="" 
+          autoNeg="on"
+          speed="100M"
+    />
+            
+    <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_1G" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_1G" 
+          descr="" 
+          autoNeg="on"
+          speed="1G"
+    />
+    
+        <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_10G" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_10G" 
+          descr="" 
+          autoNeg="on"
+          speed="10G"
+    />
+
+        <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_25G" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_25G" 
+          descr="" 
+          autoNeg="on"
+          speed="25G"
+    />
+
+        <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_40G" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_40G" 
+          descr="" 
+          autoNeg="on"
+          speed="40G"
+    />
+
+        <fabricHIfPol status="" ownerTag="" ownerKey="" 
+          speed="inherit" 
+          name="LINK_100G" 
+          linkDebounce="10" 
+          fecMode="inherit" 
+          dn="uni/infra/hintfpol-LINK_100G" 
+          descr="" 
+          autoNeg="on"
+          speed="100G"
+    />
+
+    <!-- CDP & LLDP -->
+    <cdpIfPol status="" ownerTag="" ownerKey="" 
+          name="CDP_OFF" 
+          dn="uni/infra/cdpIfP-CDP_OFF" 
+          descr="cdp is disabled" 
+          adminSt="disabled"
+    />
+        
+    <cdpIfPol status="" ownerTag="" ownerKey="" 
+          name="CDP_ON" 
+          dn="uni/infra/cdpIfP-CDP_ON" 
+          descr="cdp is enabled (default)" 
+          adminSt="enabled"
+    />
+        
+    <lldpIfPol status="" ownerTag="" ownerKey="" 
+          name="LLDP_ON" 
+          dn="uni/infra/lldpIfP-LLDP_ON" 
+          descr="lldp is enabled (default)" 
+          adminTxSt="enabled" 
+          adminRxSt="enabled"
+    />
+    
+    <lldpIfPol status="" ownerTag="" ownerKey="" 
+          name="LLDP_OFF" 
+          dn="uni/infra/lldpIfP-LLDP_OFF" 
+          descr="lldp is disabled" 
+          adminTxSt="disabled" 
+          adminRxSt="disabled"
+    />
+
+    <!-- LACP Port Channel Policy -->
+    <lacpLagPol status="" ownerTag="" ownerKey="" 
+          name="LAG_STATIC_ON" 
+          mode="off"  
+          descr="Static Port Channelling - No LACP/MACPIN (default)" 
+    />
+    
+      <!-- LACP Port Channel Policy -->
+      <lacpLagPol status="" ownerTag="" ownerKey="" 
+            name="LAG_LACP_ACTIVE" 
+            mode="active"  
+            minLinks="1" 
+            maxLinks="16" 
+            dn="uni/infra/lacplagp-LAG_LACP_ACTIVE" 
+            descr="Active Channel On min 1 Max 16 LACP fast select hot standby ports  LACP graceful converg LACP suspend individual" 
+            ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" 
+      />
+
+      <!-- LACP Port Channel Policy -->
+      <lacpLagPol status="" ownerTag="" ownerKey="" 
+            name="LAG_LACP_PASSIVE" 
+            mode="passive"  
+            minLinks="1" 
+            maxLinks="16" 
+            dn="uni/infra/lacplagp-LAG_LACP_PASSIVE" 
+            descr="Passive Channel On min 1 Max 16 LACP fast select hot standby ports  LACP graceful converg LACP suspend individual" 
+            ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" 
+      />   
+    
+    <!-- LACP Port Channel Policy -->
+    <lacpLagPol status="" ownerTag="" ownerKey="" 
+          name="LAG_MACPIN" 
+          mode="mac-pin"  
+          minLinks="1" 
+          maxLinks="16" 
+          dn="uni/infra/lacplagp-LAG_MACPIN" 
+          descr="MacPin min 1 Max 16 fast select hot standby ports" 
+          ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" 
+    />
+
+    <!-- Port Channel Interface Member Policy -->
+    <lacpIfPol 
+        name="LACP_SLOW_32768"
+        descr="LACP Interface Policy Normal (30s) (default)" 
+        dn="uni/infra/lacpifp-LACP_SLOW_32768" 
+        prio="32768"
+        txRate="normal"
+    />
+
+    <lacpIfPol 
+        name="LACP_FAST_32768"
+        descr="LACP Interface Policy Fast (1s)" 
+        dn="uni/infra/lacpifp-LACP_FAST_32768" 
+        prio="32768"
+        txRate="fast"
+    />
+
+    <!-- STP BPDU (Spanning Tree Interface Policy) -->      
+    <stpIfPol status="" ownerTag="" ownerKey="" 
+          name="STP_BPDU_GUARD_FILTER_ON" 
+          dn="uni/infra/ifPol-STP_BPDU_GUARD_FILTER_ON"
+          descr="STP BPDU Guard and Filter Enabled (default)" 
+          ctrl="3" 
+          childAction=""
+    />
+    
+    <!-- Storm Control -->
+    <stormctrlIfPol status="" ownerTag="" ownerKey="" 
+          name="STORMCONTROL_ALL_TYPES" 
+          dn="uni/infra/stormctrlifp-STORMCONTROL_ALL_TYPES"
+          descr="broadcast multicast or unknown unicast traffic (default)"
+          type="all"  
+          ratePps="unspecified" 
+          burstPps="unspecified"
+          rate="100.000000" 
+          burstRate="100.000000" 
+          
+    />
+    
+    <!-- Mis-Cabling Protocol (MCP) -->
+    <mcpIfPol status="" ownerTag="" ownerKey="" 
+          name="MCP_ON" 
+          dn="uni/infra/mcpIfP-MCP_ON" 
+          descr="MCP enabled  (default)" 
+          adminSt="enabled"
+    />
+          
+    <mcpIfPol status="" ownerTag="" ownerKey="" 
+          name="MCP_OFF" 
+          dn="uni/infra/mcpIfP-MCP_OFF" 
+          descr="MCP disabled" 
+          adminSt="disabled"
+    />
+
+    <coppIfPol 
+            descr="Per Interface Per Protocol CoPP Policy - No Policies  (default)" 
+            name="COPP_NONE"
+            dn="uni/infra/coppifpol-COPP_NONE"
+    />
+          
+    <!-- Layer 2 Interface Policy -->
+    <l2IfPol status="" ownerTag="" ownerKey="" 
+          name="L2_VLAN_SCOPE_GLOBAL"  
+          vlanScope="0" 
+          dn="uni/infra/l2IfP-L2_VLAN_SCOPE_GLOBAL" 
+          descr="Sets the VLAN encapsulation value to map only to a single EPG per leaf (default)" 
+    />
+    
+    <l2IfPol status="" ownerTag="" ownerKey="" 
+          name="L2_VLAN_SCOPE_PORTLOCAL"  
+          vlanScope="1" 
+          dn="uni/infra/l2IfP-L2_VLAN_SCOPE_PORTLOCAL" 
+          descr="Allows allocation of separate Port and Vlan translation entries in both ingress and egress directions" 
+    />
+          
+    <!-- Port Security -->
+    <l2PortSecurityPol status="" ownerTag="" ownerKey="" 
+          name="PORT_SECURITY_DISABLED"
+          maximum="0"
+          violation="protect"
+          dn="uni/infra/portsecurityP-PORT_SECURITY_DISABLED" 
+          descr="Port Security Disabled  No Connected Host Limit  (default)" 
+    />
+    
+    <!-- Data Plane Policing Policies (Egress/Ingress) -->
+    <qosDppPol 
+      name="DPP_NONE" 
+      descr="Data Plane Policing Policy None - Policy Disabled (default)" 
+      dn="uni/infra/qosdpppol-DPP_NONE" 
+      adminSt="disabled" 
+      be="unspecified" 
+      beUnit="unspecified" 
+      burst="unspecified" 
+      burstUnit="unspecified" 
+      conformAction="transmit" 
+      conformMarkCos="unspecified" 
+      conformMarkDscp="unspecified" 
+      exceedAction="drop" 
+      exceedMarkCos="unspecified" 
+      exceedMarkDscp="unspecified" 
+      mode="bit" 
+      pir="0" 
+      pirUnit="unspecified"
+      rate="0" 
+      rateUnit="unspecified" 
+      status="" 
+      type="1R2C" 
+      violateAction="drop" 
+      violateMarkCos="unspecified" 
+      violateMarkDscp="unspecified"
+    />
+     
+    <!-- Priority Flow Contol - auto default = state determined by configuration of a DCBX and peer negotiation -->
+    <qosPfcIfPol 
+            name="PFC_AUTO"
+            adminSt="auto"
+            descr="Policy Flow Control - Auto (default)" 
+            dn="uni/infra/pfc-PFC_AUTO"
+            status=""
+    />
+
+    <qosPfcIfPol 
+            name="PFC_ON"
+            adminSt="on"
+            descr="Policy Flow Control - On  (default)" 
+            dn="uni/infra/pfc-PFC_ON"
+            status=""
+    />
+
+    <qosPfcIfPol 
+            name="PFC_OFF"
+            adminSt="off"
+            descr="Policy Flow Control - off" 
+            dn="uni/infra/pfc-PFC_OFF"
+            status=""
+    />
+
+    <!-- Fibre Channnel Interface Policy - f port mode default -->
+    <fcIfPol 
+        name="FC_F_PORT" 
+        descr="Fibre Channel F port (default)" 
+        dn="uni/infra/fcIfPol-FC_F_PORT"
+        portMode="f"
+    />
+
+    <fcIfPol 
+        name="FC_FC_PORT" 
+        descr="Fibre Channel NP (FC) Port" 
+        dn="uni/infra/fcIfPol-FC_FC_PORT"
+        portMode="np"
+    />
+
+    <!-- Slow Drain Policy (FCOE) -->
+    <qosSdIfPol
+        name="SLOW_DRAIN_OFF_DISABLED"
+        descr="Slow Drain Policy Conjestion is OFF Flush is OFF  (default)" 
+        dn="uni/infra/qossdpol-SLOW_DRAIN_OFF_DISABLED" 
+        congClearAction="off" 
+        congDetectMult="10"         
+        flushAdminSt="disabled" 
+        flushIntvl="500"  
+    />
+
+    <!-- 802.1x Port Auth -default disabled (3.0.x) -->
+    <l2PortAuthPol 
+        name="8021X_DISABLED"
+        descr="802.1x Port Auth - Disabled  (default)" 
+        dn="uni/infra/portauthpol-8021X_DISABLED" 
+        adminSt="disabled" 
+        hostMode="single-host"        
+    />
+    
+    
+    <!-- 3.1.1i -->
+    
+    <!-- Firewall Policy -->
+	<nwsFwPol descr="" mode="disabled" name="FIREWALL_DISABLED">
+		<nwsSyslogSrc adminState="enabled" descr="" inclAction="deny" logLevel="information" name="default" pollingInterval="60"/>
+	</nwsFwPol>
+
+	<!-- MACSec -->
+	<macsecIfPol adminSt="disabled" descr="MACSec Disabled" name="MACSEC_DISABLED"/>
+    
+    <!-- COPP Policy -->
+    <!-- 
+    <coppIfPol descr="Per Interface Per Protocol CoPP Policy - No Policies  (default)" name="COPP_NONE"/>
+	-->   
+    
+
+  </infraInfra>
+</polUni>
+

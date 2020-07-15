@@ -1,0 +1,212 @@
+<polUni>
+    <fvTenant name="mgmt">
+
+      <!-- ------------------------------------------- FILTERS ---------------------------------------------- -->
+
+      <!-- ICMP -->
+      <vzFilter name="ICMP" descr="">  
+        <vzEntry name="ICMP" 
+              etherT="ip" 
+              prot="icmp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="unspecified" dToPort="unspecified" 
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- RADIUS -->
+      <vzFilter name="RADIUS" descr="">  
+        <vzEntry name="RADIUS_18xx" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="1812" dToPort="1813"
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+              
+        <vzEntry name="RADIUS_16xx" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="1645" dToPort="1646"
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- DNS -->
+      <vzFilter name="DNS" descr="">  
+        <vzEntry name="DNS_TCP" 
+              etherT="ip" 
+              prot="tcp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="dns" dToPort="dns" 
+              stateful="yes"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+              
+        <vzEntry  name="DNS_UDP" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="unspecified" sToPort="unspecified" 
+              dFromPort="dns" dToPort="dns" 
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- HTTPS -->
+      <vzFilter name="HTTPS" descr="">  
+        <vzEntry name="HTTPS" 
+              etherT="ip" 
+              prot="tcp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="https" dToPort="https" 
+              stateful="yes"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- NTP -->
+      <vzFilter name="NTP" descr="">  
+        <vzEntry name="NTP" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="123" dToPort="123" 
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- SNMP -->
+      <vzFilter name="SNMP" descr="">  
+        <vzEntry name="SNMP" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="161" dToPort="161" 
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- SNMP TRAP-->
+      <vzFilter name="SNMP_TRAP" descr="">  
+        <vzEntry name="SNMP_TRAP" 
+              etherT="ip" 
+              prot="udp"
+              sFromPort="162" sToPort="162"
+              dFromPort="unspecified" dToPort="unspecified" 
+              stateful="no"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>
+
+      <!-- TACACS+ TRAP-->
+      <vzFilter name="TACACS_PLUS" descr="">  
+        <vzEntry name="TACACS_PLUS" 
+              etherT="ip" 
+              prot="tcp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="49" dToPort="49" 
+              stateful="yes"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>    
+
+      <!-- SSH -->
+      <vzFilter name="SSH" descr="">  
+        <vzEntry name="SSH" 
+              etherT="ip" 
+              prot="tcp"
+              sFromPort="unspecified" sToPort="unspecified"
+              dFromPort="22" dToPort="22" 
+              stateful="yes"
+              tcpRules="" 
+              matchDscp="unspecified" 
+              icmpv6T="unspecified" icmpv4T="unspecified" 
+              arpOpc="unspecified" applyToFrag="no"/>
+      </vzFilter>  
+
+
+      <!-- ------------------------------------------- OOB (contract)---------------------------------------------- -->
+
+      <!-- Create an OOB contract and add default management prot subjects (filters) created above -->
+      <vzOOBBrCP name="CNT_OOB_MGMT">
+
+        <vzSubj name="SUBJ_OOB" descr="" revFltPorts="yes" consMatchT="AtleastOne">
+          <!-- can only state the filtername, using tDN fails, so the APIC will search local tn-mgmt for a matching filter 
+          and if not found will search tn-common. cant have duplicate names in mgmt and common and force a match in common over mgmt -->
+          <vzRsSubjFiltAtt tnVzFilterName="ICMP"/>        
+          <vzRsSubjFiltAtt tnVzFilterName="DNS"/>
+          <vzRsSubjFiltAtt tnVzFilterName="HTTPS"/>
+          <vzRsSubjFiltAtt tnVzFilterName="NTP"/>
+          <vzRsSubjFiltAtt tnVzFilterName="RADIUS"/>
+          <vzRsSubjFiltAtt tnVzFilterName="SNMP"/>
+          <vzRsSubjFiltAtt tnVzFilterName="SNMP_TRAP"/>
+          <vzRsSubjFiltAtt tnVzFilterName="SSH"/>
+          <vzRsSubjFiltAtt tnVzFilterName="TACACS_PLUS"/>
+        </vzSubj>
+        
+      </vzOOBBrCP>
+
+
+      <!-- Assign contract to EPG - "External Management Network Instance" (like an outside world EPG) as a consumer of the contract (outside world) -->
+      <mgmtExtMgmtEntity name="default">
+
+        <mgmtInstP prio="unspecified" name="INSTP_EXT_MGMT_NETS" dn="uni/tn-mgmt/extmgmt-default/instp-INSTP_EXT_MGMT_NETS" descr="" >
+
+          <!-- add contract outside world (epg) will consume -->
+          <mgmtRsOoBCons prio="unspecified" tnVzOOBBrCPName="CNT_OOB_MGMT"/>
+
+          <!-- each mgmtSubnet element describes an outside subnet consuming this contract -->
+          <mgmtSubnet name="" descr="" ip="0.0.0.0/0"/>
+
+        </mgmtInstP>
+        
+      </mgmtExtMgmtEntity>
+
+      <!-- ------------------------------------------- OOB ---------------------------------------------- -->
+      <mgmtMgmtP name="default">
+
+        <!-- OOB mgmt ipv4 -->
+        <mgmtOoB name="default"> 
+
+          <!-- Assign contract to OOB EPG as a Provider of the Contract -->
+          <mgmtRsOoBProv tnVzOOBBrCPName="CNT_OOB_MGMT" />
+
+          <!-- APICS-->
+          <mgmtRsOoBStNode addr="10.243.73.1/24" gw="10.243.73.14" tDn="topology/pod-1/node-1"/> 
+
+          <!-- get NODES from inboob.xml custom frpom node_provisiong.py script-->			
+
+        </mgmtOoB>
+          
+      </mgmtMgmtP>
+
+    </fvTenant>
+
+	</polUni>

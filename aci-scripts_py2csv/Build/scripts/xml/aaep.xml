@@ -1,0 +1,72 @@
+<polUni>
+    <infraInfra>
+        <infraAttEntityP name="AEP_FDH_VMM">
+            <infraRsDomP tDn="uni/vmmp-VMware/dom-FDH_DIV_ACI_dvSwitch1"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_MAN_VMM">
+            <infraRsDomP tDn="uni/vmmp-VMware/dom-MAN_DIV_ACI_dvSwitch1"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_OTN_VMM">
+            <infraRsDomP tDn="uni/vmmp-VMware/dom-OTN_DIV_ACI_dvSwitch1"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_ULM_VMM">
+            <infraRsDomP tDn="uni/vmmp-VMware/dom-ULM_DIV_ACI_dvSwitch1"/>
+            <infraRsDomP tDn="uni/vmmp-VMware/dom-ULM_DIV_ACI_dvSwitch2"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_FDH_L3O">
+            <infraRsDomP tDn="uni/l3dom-L3DOM_FDH"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_FDH_MGMT">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_FDH_MGMT"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_FDH_PHY">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_FDH"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_MAN_L3O">
+            <infraRsDomP tDn="uni/l3dom-L3DOM_MAN"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_MAN_MGMT">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_MAN_MGMT"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_MAN_PHY">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_MAN"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_MPOD">
+            <infraRsDomP tDn="uni/l3dom-L3DOM_MPOD"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_OTN_L3O">
+            <infraRsDomP tDn="uni/l3dom-L3DOM_OTN"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_OTN_MGMT">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_OTN_MGMT"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_OTN_PHY">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_OTN"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_ULM_L3O">
+            <infraRsDomP tDn="uni/l3dom-L3DOM_ULM"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_ULM_MGMT">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_ULM_MGMT"/>
+        </infraAttEntityP>
+        
+        <infraAttEntityP name="AEP_ULM_PHY">
+            <infraRsDomP tDn="uni/phys-PHYSDOM_ULM"/>
+        </infraAttEntityP>
+        
+    </infraInfra></polUni>

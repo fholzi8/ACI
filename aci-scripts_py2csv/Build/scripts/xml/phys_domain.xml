@@ -1,0 +1,53 @@
+<polUni>
+    <l3extDomP name="L3DOM_FDH">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_L3OUT]-static"/>
+    </l3extDomP>
+
+    <l3extDomP name="L3DOM_MAN">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_L3OUT]-static"/>
+    </l3extDomP>
+
+    <l3extDomP name="L3DOM_ULM">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_L3OUT]-static"/>
+    </l3extDomP>
+
+    <l3extDomP name="L3DOM_OTN">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_L3OUT]-static"/>
+    </l3extDomP>
+
+    <l3extDomP name="L3DOM_MPOD">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_MPOD]-static"/>
+    </l3extDomP>
+
+    <physDomP name="PHYSDOM_FDH">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_FDH_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_FDH_MGMT">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_FDH_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_MAN">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_MAN_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_MAN_MGMT">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_MAN_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_ULM">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_ULM_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_ULM_MGMT">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_ULM_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_OTN">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_OTN_STATIC]-static"/>
+    </physDomP>
+
+    <physDomP name="PHYSDOM_OTN_MGMT">                            
+            <infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_OTN_STATIC]-static"/>
+    </physDomP>
+</polUni>

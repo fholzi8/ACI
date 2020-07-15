@@ -1,0 +1,59 @@
+<polUni>
+
+	<fvTenant name="mgmt">
+
+		<!-- Create the Contract for inb management -->
+		<vzBrCP name="CNT_INB_MGMT" scope="context">
+
+			<!-- can only state the filtername, using tDN fails, so the APIC will search local tn-mgmt for a matching filter 
+			and if not found will search tn-common. cant have duplicate names in mgmt and common and force a match in common over mgmt -->
+		  <vzSubj name="SUBJ_INB_MGMT" descr="" revFltPorts="yes" consMatchT="AtleastOne">
+
+					<!-- Filters are created by OOB XML -->
+			    <vzRsSubjFiltAtt tnVzFilterName="ICMP"/>        
+					<vzRsSubjFiltAtt tnVzFilterName="DNS"/>
+					<vzRsSubjFiltAtt tnVzFilterName="HTTPS"/>
+					<vzRsSubjFiltAtt tnVzFilterName="NTP"/>
+					<vzRsSubjFiltAtt tnVzFilterName="RADIUS"/>
+					<vzRsSubjFiltAtt tnVzFilterName="SNMP"/>
+					<vzRsSubjFiltAtt tnVzFilterName="SNMP_TRAP"/>
+					<vzRsSubjFiltAtt tnVzFilterName="SSH"/>
+					<vzRsSubjFiltAtt tnVzFilterName="TACACS_PLUS"/>
+
+		  </vzSubj>
+
+		</vzBrCP>
+
+		<!-- Assign IP Subnet to BD - inb -->
+		<fvBD name="inb">
+		  <fvSubnet ip="10.243.69.254/24" />
+		</fvBD>	
+
+		<mgmtMgmtP name="default">
+
+			<!-- Create the Inband mgmt EPG -->
+			<mgmtInB encap="vlan-3966" name="EPG_INB_MGMT">
+
+				<!-- Assign mgmt BD - inb -->
+				<mgmtRsMgmtBD tnFvBDName="inb"/>
+				
+				<!-- This Inband mgmt EPG is a provider of the contract -->
+				<fvRsProv tnVzBrCPName="CNT_INB_MGMT"/>
+
+				<!-- APIC INB Addresses <mgmtRsInBStNode/> -->
+
+				<!-- APIC Nodes-->
+				<mgmtRsInBStNode addr="10.243.73.10/24" gw="10.243.73.14" tDn="topology/pod-1/node-1"/>
+
+			
+				<!-- Add Nodes from InbOOb.xml -script -->				
+				 
+			</mgmtInB>
+
+		</mgmtMgmtP>
+
+	</fvTenant>
+	
+</polUni>
+
+

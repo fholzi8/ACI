@@ -1,0 +1,10 @@
+<polUni>
+    <fvTenant name="TEN_INTERNATIONAL" descr="International Resources" />
+    <fvTenant name="TEN_COUNTRY" descr="Country Resources" />
+    <fvTenant name="TEN_NONSTANDARD" descr="Non-Standard Resources" />
+    <fvTenant name="TEN_NONSTANDARD_CLIENTS" descr="" />
+    <fvTenant name="TEN_PROJECT" descr="Project Resources" />
+    <fvTenant name="TEN_ADMINISTRATION" descr="Administration Resources" />
+    <fvTenant name="TEN_SHARED_SERVICES" descr="Shared Services Tenant" />
+    <fvTenant name="TEN_STANDARD_CLIENTS" descr="" />
+</polUni>

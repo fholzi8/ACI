@@ -1,0 +1,82 @@
+<polUni>
+   
+	<physDomP name="PHYSDOM_INB">
+		<infraRsVlanNs tDn="uni/infra/vlanns-[VLANP_INB]-static"/>
+	</physDomP>
+
+	<infraInfra>
+
+		<!-- INB VLAN POOL -->
+		<fvnsVlanInstP name="VLANP_INB" descr="Inband Management VLAN Pool" allocMode="static">
+			<fvnsEncapBlk name="BLK_V3966" descr="" allocMode="inherit" from="vlan-3966" to="vlan-3966"/>
+		</fvnsVlanInstP>
+
+		<!--INB AEP -->
+		<infraAttEntityP name="AEP_INB" descr="AEP for ACI Inband Management">
+			<!-- Attach to Domain (Physical Domain) -->
+			<infraRsDomP tDn="uni/phys-PHYSDOM_INB"/>    
+		</infraAttEntityP>	   
+
+		<!-- APIC Fabric Connected Leaf Switches & Interfaces -->
+		<infraAccPortP dn="uni/infra/accportprof-INTP_APIC" name="INTP_APIC">
+
+		<!--
+		
+			<infraRtAccPortP tDn="uni/infra/nprof-LEAF_201"/>
+			<infraRtAccPortP tDn="uni/infra/nprof-LEAF_202"/>
+		-->
+
+
+			<infraHPortS name="APIC" type="range" > 
+				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accportgrp-IPG_ACC_INB_APIC"/>	 
+				<infraPortBlk fromCard="1" fromPort="48" name="block2" toCard="1" toPort="48"/> 
+			</infraHPortS>
+
+		</infraAccPortP>
+
+
+		<!-- Interface Policy Group Access -->
+		<infraFuncP>
+			<!-- Bare Metal Host Leaf Access Port Policy Group -->
+			<infraAccPortGrp  name="IPG_ACC_INB_APIC" descr="Interface Policy Access Group - Inband Management Ports">
+
+				<infraRsHIfPol tnFabricHIfPolName="LINK_10G"/>
+				<infraRsCdpIfPol tnCdpIfPolName="CDP_ON"/>
+				<infraRsMcpIfPol  tnMcpIfPolName="MCP_ON"/>
+				<infraRsLldpIfPol tnLldpIfPolName="LLDP_ON"/>
+				<infraRsStpIfPol tnStpIfPolName="STP_BPDU_GUARD_FILTER_ON"/>
+				<infraRsStormctrlIfPol  tnStormctrlIfPolName="STORMCONTROL_ALL_TYPES"/>
+				<infraRsL2IfPol tnL2IfPolName="L2_VLAN_SCOPE_GLOBAL"/>
+				<infraRsL2PortSecurityPol tnL2PortSecurityPolName="PORT_SECURITY_DISABLED"/>
+
+				<!-- Data Plane Policy -->
+				<infraRsQosDppIfPol tnQosDppPolName="DPP_NONE"/>
+				<infraRsQosEgressDppIfPol tnQosDppPolName="DPP_NONE"/>
+				<infraRsQosIngressDppIfPol  tnQosDppPolName="DPP_NONE"/>
+
+				<!-- Monitoring Policy -->
+				<infraRsMonIfInfraPol  tnMonInfraPolName=""/>
+
+				<!-- Fibre Channel - FCOE -->
+				<infraRsFcIfPol tnFcIfPolName="FC_F_PORT"/>
+				<infraRsQosPfcIfPol tnQosPfcIfPolName="PFC_AUTO"/>
+				<infraRsQosSdIfPol  tnQosSdIfPolName="SLOW_DRAIN_OFF_DISABLED"/>
+
+				<!-- 3.0 -->
+				<infraRsL2PortAuthPol tnL2PortAuthPolName="8021X_DISABLED"/>
+				
+				<!-- 3.1.1i -->
+			<!-- 	<infraRsMacsecIfPol tDn="uni/infra/macsecifp-MACSEC_DISABLED"/>
+				<infraRsCoppIfPol tDn="uni/infra/coppifpol-COPP_NONE"/> 
+				<infraRsDwdmIfPol tDn="uni/infra/dwdmifpol-default"/>-->
+				 
+				 <!-- AEP -->
+				<infraRsAttEntP  tDn="uni/infra/attentp-AEP_INB"/>      
+
+			</infraAccPortGrp>    <!-- end Bare Metal Host Leaf Access Port Policy Group -->
+		  
+		</infraFuncP>
+
+	</infraInfra>
+
+</polUni>

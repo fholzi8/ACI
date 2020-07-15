@@ -1,0 +1,71 @@
+<polUni>
+<infraInfra>  
+        <fvnsVlanInstP name="VLANP_OTN_STATIC" descr="" allocMode="static">
+                <fvnsEncapBlk name="VLAN_941_942_LEGACY" descr="Computed From Legacy" from="vlan-941" to="vlan-942" role="external" />
+                <fvnsEncapBlk name="VLAN_960_966_LEGACY" descr="Computed From Legacy" from="vlan-960" to="vlan-966" role="external" />
+                <fvnsEncapBlk name="VLAN_968_970_LEGACY" descr="Computed From Legacy" from="vlan-968" to="vlan-970" role="external" />
+                <fvnsEncapBlk name="VLAN_990_990_LEGACY" descr="Computed From Legacy" from="vlan-990" to="vlan-990" role="external" />
+                <fvnsEncapBlk name="VLAN_1100_1100_LEGACY" descr="Computed From Legacy" from="vlan-1100" to="vlan-1100" role="external" />
+                <fvnsEncapBlk name="VLAN_1105_1105_LEGACY" descr="Computed From Legacy" from="vlan-1105" to="vlan-1105" role="external" />
+                <fvnsEncapBlk name="VLAN_1110_1111_LEGACY" descr="Computed From Legacy" from="vlan-1110" to="vlan-1111" role="external" />
+                <fvnsEncapBlk name="VLAN_1115_1115_LEGACY" descr="Computed From Legacy" from="vlan-1115" to="vlan-1115" role="external" />
+                <fvnsEncapBlk name="VLAN_1140_1183_LEGACY" descr="Computed From Legacy" from="vlan-1140" to="vlan-1183" role="external" />
+                <fvnsEncapBlk name="VLAN_1188_1197_LEGACY" descr="Computed From Legacy" from="vlan-1188" to="vlan-1197" role="external" />
+                <fvnsEncapBlk name="VLAN_1201_1227_LEGACY" descr="Computed From Legacy" from="vlan-1201" to="vlan-1227" role="external" />
+                <fvnsEncapBlk name="VLAN_1229_1229_LEGACY" descr="Computed From Legacy" from="vlan-1229" to="vlan-1229" role="external" />
+                <fvnsEncapBlk name="VLAN_1232_1237_LEGACY" descr="Computed From Legacy" from="vlan-1232" to="vlan-1237" role="external" />
+                <fvnsEncapBlk name="VLAN_1239_1259_LEGACY" descr="Computed From Legacy" from="vlan-1239" to="vlan-1259" role="external" />
+                <fvnsEncapBlk name="VLAN_1320_1370_LEGACY" descr="Computed From Legacy" from="vlan-1320" to="vlan-1370" role="external" />
+                <fvnsEncapBlk name="VLAN_1372_1382_LEGACY" descr="Computed From Legacy" from="vlan-1372" to="vlan-1382" role="external" />
+                <fvnsEncapBlk name="VLAN_1384_1395_LEGACY" descr="Computed From Legacy" from="vlan-1384" to="vlan-1395" role="external" />
+                <fvnsEncapBlk name="VLAN_1397_1397_LEGACY" descr="Computed From Legacy" from="vlan-1397" to="vlan-1397" role="external" />
+                <fvnsEncapBlk name="VLAN_1399_1400_LEGACY" descr="Computed From Legacy" from="vlan-1399" to="vlan-1400" role="external" />
+                <fvnsEncapBlk name="VLAN_1406_1419_LEGACY" descr="Computed From Legacy" from="vlan-1406" to="vlan-1419" role="external" />
+                <fvnsEncapBlk name="VLAN_1421_1421_LEGACY" descr="Computed From Legacy" from="vlan-1421" to="vlan-1421" role="external" />
+                <fvnsEncapBlk name="VLAN_1425_1425_LEGACY" descr="Computed From Legacy" from="vlan-1425" to="vlan-1425" role="external" />
+                <fvnsEncapBlk name="VLAN_1429_1430_LEGACY" descr="Computed From Legacy" from="vlan-1429" to="vlan-1430" role="external" />
+                <fvnsEncapBlk name="VLAN_1432_1433_LEGACY" descr="Computed From Legacy" from="vlan-1432" to="vlan-1433" role="external" />
+                <fvnsEncapBlk name="VLAN_1470_1472_LEGACY" descr="Computed From Legacy" from="vlan-1470" to="vlan-1472" role="external" />
+                <fvnsEncapBlk name="VLAN_1630_1631_LEGACY" descr="Computed From Legacy" from="vlan-1630" to="vlan-1631" role="external" />
+                <fvnsEncapBlk name="VLAN_1861_1861_LEGACY" descr="Computed From Legacy" from="vlan-1861" to="vlan-1861" role="external" />
+                <fvnsEncapBlk name="VLAN_2107_2114_LEGACY" descr="Computed From Legacy" from="vlan-2107" to="vlan-2114" role="external" />
+                <fvnsEncapBlk name="VLAN_2600_2601_LEGACY" descr="Computed From Legacy" from="vlan-2600" to="vlan-2601" role="external" />
+                <fvnsEncapBlk name="VLAN_2620_2623_LEGACY" descr="Computed From Legacy" from="vlan-2620" to="vlan-2623" role="external" />
+                <fvnsEncapBlk name="VLAN_2680_2680_LEGACY" descr="Computed From Legacy" from="vlan-2680" to="vlan-2680" role="external" />
+                <fvnsEncapBlk name="VLAN_2700_2700_LEGACY" descr="Computed From Legacy" from="vlan-2700" to="vlan-2700" role="external" />
+                <fvnsEncapBlk name="VLAN_2710_2718_LEGACY" descr="Computed From Legacy" from="vlan-2710" to="vlan-2718" role="external" />
+                <fvnsEncapBlk name="VLAN_2810_2811_LEGACY" descr="Computed From Legacy" from="vlan-2810" to="vlan-2811" role="external" />
+                <fvnsEncapBlk name="VLAN_3259_3259_LEGACY" descr="Computed From Legacy" from="vlan-3259" to="vlan-3259" role="external" />
+                <fvnsEncapBlk name="VLAN_3459_3459_LEGACY" descr="Computed From Legacy" from="vlan-3459" to="vlan-3459" role="external" />
+                <fvnsEncapBlk name="VLAN_3480_3480_LEGACY" descr="Computed From Legacy" from="vlan-3480" to="vlan-3480" role="external" />
+                <fvnsEncapBlk name="VLAN_3494_3494_LEGACY" descr="Computed From Legacy" from="vlan-3494" to="vlan-3494" role="external" />
+                <fvnsEncapBlk name="VLAN_3499_3499_LEGACY" descr="Computed From Legacy" from="vlan-3499" to="vlan-3499" role="external" />
+                <fvnsEncapBlk name="VLAN_3508_3508_LEGACY" descr="Computed From Legacy" from="vlan-3508" to="vlan-3508" role="external" />
+                <fvnsEncapBlk name="VLAN_3519_3519_LEGACY" descr="Computed From Legacy" from="vlan-3519" to="vlan-3519" role="external" />
+                <fvnsEncapBlk name="VLAN_3544_3544_LEGACY" descr="Computed From Legacy" from="vlan-3544" to="vlan-3544" role="external" />
+                <fvnsEncapBlk name="VLAN_3548_3548_LEGACY" descr="Computed From Legacy" from="vlan-3548" to="vlan-3548" role="external" />
+                <fvnsEncapBlk name="VLAN_3559_3559_LEGACY" descr="Computed From Legacy" from="vlan-3559" to="vlan-3559" role="external" />
+                <fvnsEncapBlk name="VLAN_3568_3568_LEGACY" descr="Computed From Legacy" from="vlan-3568" to="vlan-3568" role="external" />
+                <fvnsEncapBlk name="VLAN_3579_3579_LEGACY" descr="Computed From Legacy" from="vlan-3579" to="vlan-3579" role="external" />
+                <fvnsEncapBlk name="VLAN_3588_3588_LEGACY" descr="Computed From Legacy" from="vlan-3588" to="vlan-3588" role="external" />
+                <fvnsEncapBlk name="VLAN_3599_3599_LEGACY" descr="Computed From Legacy" from="vlan-3599" to="vlan-3599" role="external" />
+                <fvnsEncapBlk name="VLAN_3604_3604_LEGACY" descr="Computed From Legacy" from="vlan-3604" to="vlan-3604" role="external" />
+                <fvnsEncapBlk name="VLAN_3608_3608_LEGACY" descr="Computed From Legacy" from="vlan-3608" to="vlan-3608" role="external" />
+                <fvnsEncapBlk name="VLAN_3619_3619_LEGACY" descr="Computed From Legacy" from="vlan-3619" to="vlan-3619" role="external" />
+                <fvnsEncapBlk name="VLAN_3628_3628_LEGACY" descr="Computed From Legacy" from="vlan-3628" to="vlan-3628" role="external" />
+                <fvnsEncapBlk name="VLAN_3639_3639_LEGACY" descr="Computed From Legacy" from="vlan-3639" to="vlan-3639" role="external" />
+                <fvnsEncapBlk name="VLAN_3644_3644_LEGACY" descr="Computed From Legacy" from="vlan-3644" to="vlan-3644" role="external" />
+                <fvnsEncapBlk name="VLAN_3648_3648_LEGACY" descr="Computed From Legacy" from="vlan-3648" to="vlan-3648" role="external" />
+                <fvnsEncapBlk name="VLAN_3659_3659_LEGACY" descr="Computed From Legacy" from="vlan-3659" to="vlan-3659" role="external" />
+                <fvnsEncapBlk name="VLAN_3668_3668_LEGACY" descr="Computed From Legacy" from="vlan-3668" to="vlan-3668" role="external" />
+                <fvnsEncapBlk name="VLAN_3679_3679_LEGACY" descr="Computed From Legacy" from="vlan-3679" to="vlan-3679" role="external" />
+                <fvnsEncapBlk name="VLAN_3688_3688_LEGACY" descr="Computed From Legacy" from="vlan-3688" to="vlan-3688" role="external" />
+                <fvnsEncapBlk name="VLAN_3699_3699_LEGACY" descr="Computed From Legacy" from="vlan-3699" to="vlan-3699" role="external" />
+                <fvnsEncapBlk name="VLAN_3748_3748_LEGACY" descr="Computed From Legacy" from="vlan-3748" to="vlan-3748" role="external" />
+                <fvnsEncapBlk name="VLAN_3759_3759_LEGACY" descr="Computed From Legacy" from="vlan-3759" to="vlan-3759" role="external" />
+                <fvnsEncapBlk name="VLAN_3768_3768_LEGACY" descr="Computed From Legacy" from="vlan-3768" to="vlan-3768" role="external" />
+                <fvnsEncapBlk name="VLAN_3779_3779_LEGACY" descr="Computed From Legacy" from="vlan-3779" to="vlan-3779" role="external" />
+                <fvnsEncapBlk name="VLAN_3788_3788_LEGACY" descr="Computed From Legacy" from="vlan-3788" to="vlan-3788" role="external" />
+        </fvnsVlanInstP>
+        </infraInfra>
+    </polUni>
