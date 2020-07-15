@@ -13,8 +13,38 @@ The following diagram depicts the design of the IPN connectivity showing only th
 </a>
 
 In this deployment, POD-1 and POD-2 happen to be in geographically diverse data centers where the four inter-connecting WAN links are 10Gbps Ethernet each although the POD’s could be in different campus locations or on different floors in a data center.
-IPN L2
+
+<h3>IPN L2</h3>
 The only IPN requirements at layer 2 are to use VLAN 4 and increase the MTU. The VLAN requirement is for 802.1q between the spine and the IPN devices and to use encapsulation dot1q 4 on these sub-interfaces, additionally the system and L3 interface MTU must be set to 9150 as follows.
 
 
+<h3>IPN L2</h3>
+The only IPN requirements at layer 2 are to use VLAN 4 and increase the MTU. The VLAN requirement is for 802.1q between the spine and the IPN devices and to use encapsulation dot1q 4 on these sub-interfaces, additionally the system and L3 interface MTU must be set to 9150 as follows.
+1	!
+2	system jumbomtu 9150
+3	!
+4	interface Ethernetx...
+5	 desc any interface carrying IPN traffic
+6	 mtu 9150    
+ 
+<h3>IPN L3</h3>
+VRF
+We have VRF’s configured on this deployment and this is also a recommended configuration by Cisco though not technically required but is good practice as we want to isolate the IPN traffic from interruption certainly if the IPN devices are used for other services and route table changes could break IPN connectivity. Using VRFs requires all interfaces (or sub-interfaces) including dedicated IPN loopbacks to be in the VRF as well as a separate OSPF process  in that VRF. The PIM RP address will be configured in the VRF too and is discussed in the multicast section in this post. The VRF in this deployment is called ‘fabric-mpod’, this VRF is not configured in the APIC, it only exists on the IPN devices encompassing VLAN 4.
+1	vrf context fabric-mpod
+2	!
+3	interface loopback yy
+4	  vrf member fabric-mpod
+5	!
+6	interface Ethernetx...
+7	  vrf member fabric-mpod
+8	!
+9	router ospf a1
+10	  vrf fabric-mpod
+ 
+<h4>Addressing</h4>
+IP addressing for the WAN and IPN POD to Spine  has been taken from a RFC 1918 range, the allocated range has been split in to three class C networks (/24), one each for;
+	• POD-A IPN [10.96.1.0/24]
+	• POD-B IPN [10.96.2.0/24]
+	• WAN Interconnects [10.96.255.0/24]
+Within the ACI fabric the IPN uses tenant ‘infra’ and VRF ‘overlay-1’ (translates to the VRF on the IPN devices ‘fabric-mpod’ – you could call the IPN devices VRF ‘overlay-1’ to keep it consistent but I don’t think its very descriptive). The address ranges used should not conflict with any other addressing in the ‘overlay-1’ VRF. The IPN devices have loopback created using host addresses from the start of the allocated pool for the POD they are located in. The loopback addresses on the spine switches are configured via the OSPF configuration on the APIC. Interconnects between the IPN devices and IPN & spine switches are allocated /30 addresses starting at the end of the allocated pool and work backwards for each allocation.
 
