@@ -465,3 +465,124 @@ Use the above IGMP & PIM commands to work hop by hop if you are having issues be
 
 The following configuration is stripped to the essentials for IPN, it shows IPN-POD1-01 but can be used for all IPN devices with the exception of loopback 100 where this is only required for devices acting as RP’s. IPN-POD1-02 has the back up RP task, this is achieved by configuring interface loopback 100 as in the configuration below but with a mask of /30 which includes the RP address configured on IPN-POD1-01 but has a host address of another IP in that network. PIM Bi-dir RP’s don’t hold state and therefore there is not really an RP, its about getting multicast traffic sent to a root device which using the multicast table sends the traffic back down the PIM tree. the /32 is a longer prefix so will be preferred and as the backup RP is not configured with a host address the same we don’t have to worry about host routes being installed in the backup RP routing table and causing multicast breaks due to local device host routes. DHCP relay needs to be configured or POD2 will not get DHCP addresses and it wont come up. It is important to note that the DHCP relay addresses are the APIC IP addresses and are the IP addresses on the interfaces in the VRF ‘overlay-1’ which is part of the infra address ranges configured during setup, NOT the ‘OOB’ interface addresses.
 
+	hostname IPN-POD1-01
+	
+ 	feature ospf
+	feature pim
+	feature dhcp
+	feature lldp
+	 
+	system jumbomtu 9150
+	interface breakout module 1 port 35-36 map 10g-4x
+	 
+	ip pim mtu 9000
+	vlan 1
+	 
+	service dhcp
+	ip dhcp relay
+	no ipv6 dhcp relay
+	vrf context fabric-mpod
+	  ip pim rp-address 10.96.1.233 group-list 225.0.0.0/8 bidir
+	  ip pim rp-address 10.96.1.233 group-list 239.255.255.240/28 bidir
+	 
+	interface Ethernet1/1
+	  description 40G link to POD1-SPINE-101(1/36)
+	  mtu 9150
+	  vrf member fabric-mpod
+	  no shutdown
+	 
+	interface Ethernet1/1.4
+	  description 40G link to POD1-SPINE-101(1/36)
+	  mtu 9150
+	  encapsulation dot1q 4
+	  vrf member fabric-mpod
+	  ip address 10.96.1.253/30
+	  ip ospf network point-to-point
+	  ip ospf mtu-ignore
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  ip dhcp relay address 10.101.0.1 
+	  ip dhcp relay address 10.101.0.2 
+	  no shutdown
+	 
+	interface Ethernet1/5
+	  description 40G link to POD1-SPINE-102(1/36)
+	  mtu 9150
+	  vrf member fabric-mpod
+	  no shutdown
+	 
+	interface Ethernet1/5.4
+	  description 40G link POD1-SPINE-102(1/36)
+	  mtu 9150
+	  encapsulation dot1q 4
+	  vrf member fabric-mpod
+	  ip address 10.96.1.249/30
+	  ip ospf network point-to-point
+	  ip ospf mtu-ignore
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  ip dhcp relay address 10.101.0.1 
+	  ip dhcp relay address 10.101.0.2 
+	  no shutdown  
+	 
+	interface Ethernet1/27
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  channel-group 10
+	  no shutdown
+	 
+	interface Ethernet1/28
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  channel-group 10
+	  no shutdown
+	 
+	interface Ethernet1/35/1
+	  description 10G Link (WAN) to IPN-POD2-01(1/35/1)
+	  speed 10000
+	  duplex full
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 10.96.255.253/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  no shutdown
+	 
+	interface Ethernet1/36/1
+	  description 10G Link (WAN) to IPN-POD2-02(1/36/1)
+	  speed 10000
+	  duplex full
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 10.96.255.249/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	  no shutdown
+	 
+	interface loopback96
+	  vrf member fabric-mpod
+	  ip address 10.96.1.1/32
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	 
+	interface loopback100
+	  vrf member fabric-mpod
+	  ip address 10.96.1.233/32
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	 
+	 interface Port-channel10
+	  description EtherChannel to IPN-POD1-02
+	  mtu 9150
+	  vrf member fabric-mpod
+	  ip address 100.96.1.237/30
+	  ip ospf network point-to-point
+	  ip router ospf a1 area 0.0.0.0
+	  ip pim sparse-mode
+	   
+	router ospf a1
+	  vrf fabric-mpod
+	   router-id 10.96.1.1
+	    log-adjacency-changes detail
