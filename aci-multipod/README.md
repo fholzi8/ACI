@@ -466,8 +466,7 @@ Use the above IGMP & PIM commands to work hop by hop if you are having issues be
 The following configuration is stripped to the essentials for IPN, it shows IPN-POD1-01 but can be used for all IPN devices with the exception of loopback 100 where this is only required for devices acting as RP’s. IPN-POD1-02 has the back up RP task, this is achieved by configuring interface loopback 100 as in the configuration below but with a mask of /30 which includes the RP address configured on IPN-POD1-01 but has a host address of another IP in that network. PIM Bi-dir RP’s don’t hold state and therefore there is not really an RP, its about getting multicast traffic sent to a root device which using the multicast table sends the traffic back down the PIM tree. the /32 is a longer prefix so will be preferred and as the backup RP is not configured with a host address the same we don’t have to worry about host routes being installed in the backup RP routing table and causing multicast breaks due to local device host routes. DHCP relay needs to be configured or POD2 will not get DHCP addresses and it wont come up. It is important to note that the DHCP relay addresses are the APIC IP addresses and are the IP addresses on the interfaces in the VRF ‘overlay-1’ which is part of the infra address ranges configured during setup, NOT the ‘OOB’ interface addresses.
 
 	hostname IPN-POD1-01
- 
-	feature ospf
+ 	feature ospf
 	feature pim
 	feature dhcp
 	feature lldp
